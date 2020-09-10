@@ -225,7 +225,8 @@
 			}
 		</style>
 		<script>
-			function testVariable() {
+			function testVariable(event) {
+				event.preventDefault();
 				var result = 'HEYAA HERE IS YOUR RANK';
 				document.getElementById('spanResult').textContent = result;
 			}
