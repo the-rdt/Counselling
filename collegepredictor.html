@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Choice Filling Tool</title>
+		<title>COLLAGE PREDICTOR</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -393,43 +393,32 @@
 							style="border-top-right-radius: 15px"
 						/>
 					</div>
-					<h1 style="font-family:'Times New Roman', Times, serif;color:green">CHOICE FILLING TOOL</h1>
+					<h1 style="font-family:'Times New Roman', Times, serif;color:green">COLLAGE PREDICTOR</h1>
 					<form action="" class="col-9 mb-5 text-center choice-form">
-						<br>
-						<select
-							name="colleges"
-							multiple
+                        <br>
+                        <input
+										type="number"
+										class="form-control form-control-lg"
+										placeholder="Enter your Percentile"
+										id="textone"
+										min="1" max="100"
+                        />
+                        <br>
+                        <p>-------OR-------</p>
+                        <input
+										type="number"
+										class="form-control form-control-lg "
+										placeholder="Enter your Rank"
+										id="textone"
+										min="1" max="1000000"
+                        />
+                        <select
+							name="gender"
+							id="gender"
 							class="ui fluid dropdown my-4"
-							id="colleges"
 						>
-							<option value="">Select preferred colleges</option>
-							<option value="agartala">IIIT Agartala</option>
-							<option value="allahabad">IIIT Allahabad</option>
-							<option value="bhagalpur">IIIT Bhagalpur</option>
-							<option value="bhopal">IIIT Bhopal</option>
-							<option value="dharwad">IIIT Dharwad</option>
-							<option value="guwahati">IIIT Guwahati</option>
-							<option value="gwalior">IIIT Gwalior</option>
-							<option value="jabalpur">IIIT Jabalpur</option>
-							<option value="kalyani">IIIT Kalyani</option>
-							<option value="kanchipuram">
-								IIIT Kanchipuram
-							</option>
-							<option value="kota">IIIT Kota</option>
-							<option value="kurnool">IIIT Kurnool</option>
-							<option value="lucknow">IIIT Lucknow</option>
-							<option value="nagpur">IIIT Nagpur</option>
-							<option value="pune">IIIT Pune</option>
-							<option value="raichur">IIIT Raichur</option>
-							<option value="ranchi">IIIT Ranchi</option>
-							<option value="sonepat">IIIT Sonepat</option>
-							<option value="sricity">IIIT Sricity</option>
-							<option value="surat">IIIT Surat</option>
-							<option value="tiruchirapalli">
-								IIIT Tiruchirapalli
-							</option>
-							<option value="una">IIIT Una</option>
-							<option value="vadodara">IIIT Vadodara</option>
+							<option value="">Gender Neutral</option>
+							<option value="f">Female only</option>
 						</select>
 						<select
 							name="colleges"
@@ -442,40 +431,19 @@
 							<option value="obcncl">OBC-NCL</option>
 							<option value="sc">SC</option>
 							<option value="st">ST</option>
-						</select>
-						<select
-							name="gender"
-							id="gender"
-							class="ui fluid dropdown my-4"
-						>
-							<option value="">Gender Neutral</option>
-							<option value="f">Female only</option>
-						</select>
-						<select
-							name="branch"
-							multiple
-							class="ui fluid dropdown my-4"
-							id="branch"
-						>
-							<option value="">Select preferred Branches</option>
-							<option value="cs">Computer Science</option>
-							<option value="it">Information Technology</option>
-							<option value="ece">
-								Electronics and Communication Engineering
-							</option>
-							<option value="mech">Mechanical Engineering</option>
-						</select>
+                    </select>
+                    <button class="positive ui button col-xs-3"
+                    class="btn btn-primary"
+                    >
+                 <a href="index.html" style="color:white">   Back</a>
+                </button>
 						<button class="positive ui button col-xs-3"
-						class="btn btn-primary"
-						>
-					 <a href="index.html" style="color:white">   Back</a>
-					</button>
-							<button class="positive ui button col-xs-3"
-								class="btn btn-primary"
-								onclick="myFunction()"
-								>
-								Predict Result
-							</button>
+							class="btn btn-primary"
+							onclick="myFunction()"
+							>
+							Predict Result
+                        </button>
+                        
 					</form>
 				</div>
 			</div>
@@ -492,19 +460,6 @@
 								<th scope="col">S.NO</th>
 								<th scope="col">Institute</th>
 								<th scope="col">Branch</th>
-								<th scope="col">Round1<br>(Closing)</th>
-								<th scope="col">Round2<br>(Opening)</th>
-								<th scope="col">Round2<br>(Closing)</th>
-								<th scope="col">Round3<br>(Opening)</th>
-								<th scope="col">Round3<br>(Closing)</th>
-								<th scope="col">Round4<br>(Opening)</th>
-								<th scope="col">Round4<br>(Closing)</th>
-								<th scope="col">Round5<br>(Opening)</th>
-								<th scope="col">Round5<br>(Closing)</th>
-								<th scope="col">Round6<br>(Opening)</th>
-								<th scope="col">Round6<br>(Closing)</th>
-								<th scope="col">Round7<br>(Opening)</th>
-								<th scope="col">Round7<br>(Closing)</th>
 								
 							  </tr>
 							</thead>
@@ -513,127 +468,43 @@
 								<th scope="row">1</th>
 								<td>IIITA</td>
 								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
+								
 							  </tr>
 							  <tr >
 								<th scope="row">2</th>
 								<td>IIITA</td>
 								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
+								
 							  </tr>
 							  <tr>
 								<th scope="row">3</th>
 								<td>IIITA</td>
 								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
+								
 							  </tr>
 							  <tr>
 								<th scope="row">4</th>
 								<td>IIITA</td>
 								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
+								
 							  </tr>
 							  <tr>
 								<th scope="row">5</th>
 								<td>IIITA</td>
 								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
+								
 							  </tr>
 							  <tr>
 								<th scope="row">6</th>
 								<td>IIITA</td>
 								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
+								
 							  </tr>
 							  <tr>
 								<th scope="row">7</th>
 								<td>IIITA</td>
 								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
+								
 							  </tr>
 							</tbody>
 						  </table>
