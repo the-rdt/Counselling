@@ -25,11 +25,14 @@
 		<!-- Title of your page: add the name of your IIIT-->
 		<title>College Predictor | IIITians Network</title>
 		<meta
-			content="This is All IIIT page of the community IIITians Network"
+			content="This is Jee rank predictor tool of the IIITians Network"
 			name="descriptison"
 		/>
 		<!--You have to update the name of your IIIT in both these lines -->
-		<meta content="IIITians Network - All IIIT" name="keywords" />
+		<meta
+			content="Rank predictor | Jee | IIITians network"
+			name="keywords"
+		/>
 
 		<!-- Favicons -->
 		<link href="img/logo/iiitian.png" rel="icon" />
@@ -115,7 +118,7 @@
 		<!-- <link href="assets/css/footer.css" rel="stylesheet" /> ============= not needed on this page -->
 		<!-- <link href="assets/css/heading.css" rel="stylesheet" /> ============= not needed on this page-->
 
-		<!-- Carousel files -->
+		<!-- Bootstrap min css -->
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -266,11 +269,6 @@
 				animation: typing 4s steps(30, end),
 					blink-caret 0.5s step-end infinite;
 			}
-			#myDIV{
-				display: none;
-				width:100%;
-			}
-
 		</style>
 		<!-- semantic ui form custom css ----- important------------------- -->
 		<style>
@@ -287,15 +285,16 @@
 				box-shadow: 4px -2px 5px 0px #00000040;
 			}
 		</style>
-		<!--=====================JS FOR SUBMIT BUTTON=====================-->
-		<script>
-			function testVariable(event) {
-				event.preventDefault();
-				var result = 'HEYAA HERE IS YOUR RANK';
-				document.getElementById('spanResult').textContent = result;
-			}
-		</script>
 		<!-- semantic ui form custom css end ------------------------------- -->
+		<!-- rank div style ---------------- ------------------------------- -->
+		<style>
+			.rank {
+				background-color: white;
+				border-radius: 7px;
+				box-shadow: 1px 2px 6px 0px #00000015;
+			}
+		</style>
+		<!-- rank div style end ------------ ------------------------------- -->
 	</head>
 	<body style="background-color: #c0c0c8">
 		<div class="se-pre-con"></div>
@@ -385,7 +384,7 @@
 					class="col-11 col-md-9 col-lg-8 col-xl-7 d-flex flex-wrap justify-content-around align-items-center p-0 m-0 all-container"
 				>
 					<div
-						class="d-flex flex-wrap justify-content-around align-items-center mb-5 img-container"
+						class="d-flex flex-wrap justify-content-around align-items-center img-container"
 					>
 						<img
 							src="./img/bg-01.jpg"
@@ -394,51 +393,63 @@
 							style="border-top-right-radius: 15px"
 						/>
 					</div>
-					<h1 class="center-block"style="font-family:'Times New Roman', Times, serif;color:green">RANK PREDICTOR</h1>
-					<form action="" class="col-9 mb-5 text-center choice-form">
-						<br>
+					<h1
+						class="center-block mb-4"
+						style="
+							font-family: 'Times New Roman', Times, serif;
+							color: green;
+						"
+					>
+						RANK PREDICTOR
+					</h1>
+					<form class="col-9 mb-5 text-center choice-form">
 						<input
-										type="number"
-										class="form-control form-control-lg"
-										placeholder="Enter your Percentile"
-										id="textone"
-										min="1" max="100"
+							type="number"
+							class="form-control form-control-lg"
+							placeholder="Enter your Percentile"
+							id="percentile"
+							min="0"
+							max="100"
 						/>
 						<select
 							name="colleges"
 							class="ui fluid dropdown my-4"
-							id="colleges"
+							id="category"
 						>
 							<option value="">Choose your Category</option>
 							<option value="gen">General</option>
 							<option value="ews">General-EWS</option>
-							<option value="obcncl">OBC-NCL</option>
+							<option value="obc">OBC-NCL</option>
 							<option value="sc">SC</option>
 							<option value="st">ST</option>
-						</select>		
-								<button class="positive ui button col-xs-3"
-								class="btn btn-primary"
-								>
-							 <a href="index.html" style="color:white">   Back</a>
-							</button>
-									<button class="positive ui button col-xs-3"
-										class="btn btn-primary"
-										onclick="testVariable()"
-										>
-										Predict Result
-									</button>
-							
+							<option value="gen_pwd">General PWD</option>
+							<option value="obc_pwd">OBC-PWD</option>
+							<option value="ews_pwd">EWS-PWD</option>
+						</select>
+						<button
+							class="positive ui button col-xs-3"
+							class="btn btn-primary"
+						>
+							<a href="index.html" style="color: white"> Back</a>
+						</button>
+						<button
+							class="positive ui button col-xs-3"
+							class="btn btn-primary"
+							onclick="predictRank(event)"
+						>
+							Predict Result
+						</button>
 					</form>
 				</div>
 			</div>
-				
+			<div class="text-center col-10 col-sm-8 col-md-7 col-lg-5 col-xl-4 p-3 m-auto rank" id="rank">
+				Your expected rank is : _____
+			</div>
 		</main>
-			<script>
-				$('.ui.dropdown').dropdown();
-			</script>
+		<script>
+			$('.ui.dropdown').dropdown();
+		</script>
 
-			
-			
 		<!-- ======= Footer ======= -->
 
 		<!-- No need to change anything in footer area -->
@@ -648,6 +659,7 @@
 
 		<!-- Template Main JS File -->
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/rank-predictor.js"></script>
 
 		<!-- Custom JS files -->
 		<!-- <script src="assets/js/custom.js"></script> -->

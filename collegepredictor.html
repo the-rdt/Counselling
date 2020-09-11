@@ -266,11 +266,9 @@
 				animation: typing 4s steps(30, end),
 					blink-caret 0.5s step-end infinite;
 			}
-			#myDIV{
-			
-				width:100%;
+			#myDIV {
+				width: 100%;
 			}
-
 		</style>
 		<!-- semantic ui form custom css ----- important------------------- -->
 		<style>
@@ -291,7 +289,7 @@
 		<script>
 			function myFunction(event) {
 				event.preventDefault();
-				document.getElementById("myDIV").style.display = "block";
+				document.getElementById('myDIV').style.display = 'block';
 			}
 		</script>
 		<!-- semantic ui form custom css end ------------------------------- -->
@@ -393,34 +391,43 @@
 							style="border-top-right-radius: 15px"
 						/>
 					</div>
-					<h1 style="font-family:'Times New Roman', Times, serif;color:green">COLLAGE PREDICTOR</h1>
+					<h1
+						style="
+							font-family: 'Times New Roman', Times, serif;
+							color: green;
+						"
+					>
+						COLLAGE PREDICTOR
+					</h1>
 					<form action="" class="col-9 mb-5 text-center choice-form">
-                        <br>
-                        <input
-										type="number"
-										class="form-control form-control-lg"
-										placeholder="Enter your Percentile"
-										id="textone"
-										min="1" max="100"
-                        />
-                        <br>
-                        <p>-------OR-------</p>
-                        <input
-										type="number"
-										class="form-control form-control-lg "
-										placeholder="Enter your Rank"
-										id="textone"
-										min="1" max="1000000"
-                        />
-                        <select
+						<br />
+						<input
+							type="number"
+							class="form-control form-control-lg"
+							placeholder="Enter your Percentile"
+							id="textone"
+							min="1"
+							max="100"
+						/>
+						<br />
+						<p>-------OR-------</p>
+						<input
+							type="number"
+							class="form-control form-control-lg"
+							placeholder="Enter your Rank"
+							id="textone"
+							min="1"
+							max="1000000"
+						/>
+						<select
 							name="gender"
 							id="gender"
 							class="ui fluid dropdown my-4"
 						>
 							<option value="">Gender</option>
 							<option value="m">Male</option>
-                            <option value="f">Female</option>
-                            <option value="o">Others</option>
+							<option value="f">Female</option>
+							<option value="o">Others</option>
 						</select>
 						<select
 							name="colleges"
@@ -433,115 +440,115 @@
 							<option value="obcncl">OBC-NCL</option>
 							<option value="sc">SC</option>
 							<option value="st">ST</option>
-                    </select>
-                    <button class="positive ui button col-xs-3"
-                    class="btn btn-primary"
-                    >
-                 <a href="index.html" style="color:white">   Back</a>
-                </button>
-						<button class="positive ui button col-xs-3"
+						</select>
+						<button
+							class="positive ui button col-xs-3"
+							class="btn btn-primary"
+						>
+							<a href="index.html" style="color: white"> Back</a>
+						</button>
+						<button
+							class="positive ui button col-xs-3"
 							class="btn btn-primary"
 							onclick="myFunction()"
-							>
+						>
 							Predict Result
-                        </button>
-                        
+						</button>
 					</form>
 				</div>
 			</div>
-				<section id="myDIV" >
-					<div class="container" >
-			  
-						<div class="section-title" data-aos="fade-up" >
-							<p>Collages </p>
-						</div>
-
-						<table class="table" data-aos="fade-up" style="background-color: #fff;">
-							<thead class="thead-dark">
-							  <tr>
-								<th scope="col">S.NO</th>
-								<th scope="col">Institute</th>
-								<th scope="col">Branch</th>
-								<th scope="col">Average Placement</th>
-								<th scope="col">Highest Placement</th>
-								<th scope="col">JOSAA<br> Round-7(Cutoff)</th>
-							  </tr>
-							</thead>
-							<tbody   >
-							  <tr>
-								<th scope="row">1</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>x</td>
-								<td>x</td>
-								<td>x</td>
-								
-								
-							  </tr>
-							  <tr >
-								<th scope="row">2</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>x</td>
-								<td>x</td>
-								<td>x</td>
-								
-							  </tr>
-							  <tr>
-								<th scope="row">3</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>x</td>
-								<td>x</td>
-								<td>x</td>
-								
-							  </tr>
-							  <tr>
-								<th scope="row">4</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>x</td>
-								<td>x</td>
-								<td>x</td>
-								
-							  </tr>
-							  <tr>
-								<th scope="row">5</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>x</td>
-								<td>x</td>
-								<td>x</td>
-								
-							  </tr>
-							  <tr>
-								<th scope="row">6</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>x</td>
-								<td>x</td>
-								<td>x</td>
-								
-							  </tr>
-							  <tr>
-								<th scope="row">7</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>x</td>
-								<td>x</td>
-								<td>x</td>
-								
-							  </tr>
-							</tbody>
-						  </table>
+			<section id="myDIV">
+				<div class="container">
+					<div class="section-title" data-aos="fade-up">
+						<p>Collages</p>
 					</div>
-				</section>
+					<div class="table-responsive">
+						<table
+							class="table"
+							data-aos="fade-up"
+							style="background-color: #fff"
+						>
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">S.NO</th>
+									<th scope="col">Institute</th>
+									<th scope="col">Branch</th>
+									<th scope="col">Average Placement</th>
+									<th scope="col">Highest Placement</th>
+									<th scope="col">
+										JOSAA<br />
+										Round-7(Cutoff)
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>IIITA</td>
+									<td>CSE</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>IIITA</td>
+									<td>CSE</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>IIITA</td>
+									<td>CSE</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td>IIITA</td>
+									<td>CSE</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr>
+								<tr>
+									<th scope="row">5</th>
+									<td>IIITA</td>
+									<td>CSE</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr>
+								<tr>
+									<th scope="row">6</th>
+									<td>IIITA</td>
+									<td>CSE</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr>
+								<tr>
+									<th scope="row">7</th>
+									<td>IIITA</td>
+									<td>CSE</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
 		</main>
-			<script>
-				$('.ui.dropdown').dropdown();
-			</script>
+		<script>
+			$('.ui.dropdown').dropdown();
+		</script>
 
-			<!-- <div class="limiter">
+		<!-- <div class="limiter">
 				<div class="container-login100">
 					<div class="wrap-login100">
 						<div
@@ -791,7 +798,6 @@
 					</div>
 				</div>
 			</div> -->
-		</main>
 		<!-- ======= Footer ======= -->
 
 		<!-- No need to change anything in footer area -->
