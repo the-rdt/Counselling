@@ -405,7 +405,7 @@
 							type="number"
 							class="form-control form-control-lg"
 							placeholder="Enter your Percentile"
-							id="textone"
+							id="percentile"
 							min="1"
 							max="100"
 						/>
@@ -415,7 +415,7 @@
 							type="number"
 							class="form-control form-control-lg"
 							placeholder="Enter your Rank"
-							id="textone"
+							id="rank"
 							min="1"
 							max="1000000"
 						/>
@@ -425,19 +425,18 @@
 							class="ui fluid dropdown my-4"
 						>
 							<option value="">Gender</option>
-							<option value="m">Male</option>
-							<option value="f">Female</option>
-							<option value="o">Others</option>
+							<option value="m">Gender Neutral</option>
+							<option value="f">Female Only</option>
 						</select>
 						<select
 							name="colleges"
 							class="ui fluid dropdown my-4"
-							id="colleges"
+							id="category"
 						>
 							<option value="">Choose your Category</option>
 							<option value="gen">General</option>
 							<option value="ews">General-EWS</option>
-							<option value="obcncl">OBC-NCL</option>
+							<option value="obc">OBC-NCL</option>
 							<option value="sc">SC</option>
 							<option value="st">ST</option>
 						</select>
@@ -450,7 +449,7 @@
 						<button
 							class="positive ui button col-xs-3"
 							class="btn btn-primary"
-							onclick="myFunction()"
+							onclick="collegePredictor(event)"
 						>
 							Predict Result
 						</button>
@@ -1007,6 +1006,7 @@
 
 		<!-- Template Main JS File -->
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/college-predictor.js"></script>
 
 		<!-- Custom JS files -->
 		<!-- <script src="assets/js/custom.js"></script> -->
