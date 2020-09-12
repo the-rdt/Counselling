@@ -8,8 +8,14 @@ It contains 5 tools.
 5.Ask to IIITians 
 But as of now  rank predector and choice filling toola are only designed. 
 Counselling Homepage , Rankpredictor and choice filling tool: Complete Front-end part is designed and developed by Reha(IIIT Dharwad| 2019-23 batch |rehasreekoneru@gmail.com) .
-Particle js background in landing page and all faded animation effects are added by : Rishab (IIIT Lucknow 2019-23 Batch) .
+Particle js background in landing page and all faded animation effects are added by and connected all backend : Rishab (IIIT Lucknow 2019-23 Batch) .
 Anyone who finds a better design than this are free to update it.
+Backend:
+Aditya Agarwal( IIIT Raichur ),
+Arunit Kumar (IIIT Bhagalpur),
+Ishan (IIIT Kalyani) .
+Logics: Aman Malhothra 
+Administrator:Prashant Katiyar
 
 
 
