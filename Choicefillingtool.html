@@ -266,11 +266,14 @@
 				animation: typing 4s steps(30, end),
 					blink-caret 0.5s step-end infinite;
 			}
-			#myDIV{
-				display:none;
-				width:100%;
+			#myDIV {
+				display: none;
+				width: 100%;
 			}
-
+			/* black font in all iiit dropdown */
+			.all-iiit a {
+				color: #121212;
+			}
 		</style>
 		<!-- semantic ui form custom css ----- important------------------- -->
 		<style>
@@ -286,13 +289,30 @@
 				border-top-right-radius: 15px;
 				box-shadow: 4px -2px 5px 0px #00000040;
 			}
+			th,
+			td {
+				text-align: center;
+			}
 		</style>
 		<!--=====================JS FOR SUBMIT BUTTON=====================-->
 		<script>
 			function myFunction(event) {
 				event.preventDefault();
-				document.getElementById("myDIV").style.display = "block";
+				document.getElementById('myDIV').style.display = 'block';
 			}
+		</script>
+		<!-- auto hide navigation on scroll -->
+		<script type="text/javascript">
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function () {
+				var currentScrollPos = window.pageYOffset;
+				if (prevScrollpos > currentScrollPos) {
+					document.getElementById('header').style.top = '0';
+				} else {
+					document.getElementById('header').style.top = '-75px';
+				}
+				prevScrollpos = currentScrollPos;
+			};
 		</script>
 		<!-- semantic ui form custom css end ------------------------------- -->
 	</head>
@@ -304,21 +324,21 @@
 				<div class="logo mr-auto">
 					<a href="index.html"
 						><img
-							src="img/logo/iiitian.png"
-							alt=""
+							src="img/logo/logo.png"
+							alt="Logo | IIITians Network | IIIT | Community | Indian Institute of Information Technology"
 							class="img-fluid"
 					/></a>
 				</div>
 
 				<nav class="nav-menu d-none d-lg-block">
 					<ul>
-						<li><a href="https://iiitiansnetwork.com/">Home</a></li>
-						<!--li><a href="">Counselling</a></li>
+						<li class="active"><a href="#">Home</a></li>
+						<!--li>
                     <li><a href="">News</a></li>
                     <li class="drop-down"><a href="">Login</a>
                         <ul>
                             <li><a href="#">Student</a></li>
-                            <li><a href="#">Clubs</a></li>
+                            <li><a href="#">Club</a></li>
                             <li class="drop-down"><a href="#">Register</a>
                                 <ul>
                                     <li><a href="">Individual</a></li>
@@ -329,41 +349,166 @@
                         </ul>
                     </li-->
 						<li>
-							<a href="http://team.iiitiansnetwork.com/"
-								>Our Team</a
+							<a
+								href="https://jeecounselling.iiitiansnetwork.com/"
+								>Jee Counselling</a
 							>
 						</li>
-						<li class="active">
-							<a href="https://alliiit.iiitiansnetwork.com/"
-								>All IIIT</a
+						<li>
+							<a href="https://placement.iiitiansnetwork.com/"
+								>IIIT Placements</a
 							>
-							<!--           	<ul>
-                  <li><a href="#">IIITM Gwalior</a></li>
-                  <li><a href="#">IIIT Allahabad</a></li>
-                  <li><a href="#">IIITDM Kancheepuram</a></li>
-                  <li><a href="#">IIITDM Jabalpur</a></li>
-                  <li><a href="#">IIITDM Kurnool</a></li>
-                  <li><a href="#">IIIT Chittoor</a></li>
-                  <li><a href="#">IIIT Guwahati</a></li>
-                  <li><a href="#">IIIT Kalyani</a></li>
-                  <li><a href="#">IIIT Una</a></li>
-                  <li><a href="#">IIIT Vadodara</a></li>
-                  <li><a href="#">IIIT Kota</a></li>
-                  <li><a href="#">IIIT Tiruchirappalli</a></li>
-                  <li><a href="#">IIIT Sonepat</a></li>
-                  <li><a href="#">IIIT Manipur</a></li>
-                  <li><a href="#">IIIT Lucknow</a></li>
-                  <li><a href="#">IIIT Dharward</a></li>
-                  <li><a href="#">IIIT Pune</a></li>
-                  <li><a href="#">IIIT Bhopal</a></li>
-                  <li><a href="#">IIIT Agartala</a></li>
-                  <li><a href="#">IIIT Nagpur</a></li>
-                  <li><a href="#">IIIT Ranchi</a></li>
-                  <li><a href="#">IIIT Surat</a></li>
-                  <li><a href="#">IIIT Bhagalpur</a></li>
-                  <li><a href="#">IIIT Raichur</a></li>
-				</ul>
--->
+						</li>
+
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="navbarDropdown"
+								role="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								All IIIT
+							</a>
+							<div
+								class="dropdown-menu all-iiit"
+								aria-labelledby="navbarDropdown"
+								style="max-height: 400px; overflow-y: scroll"
+							>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://agartala.iiitiansnetwork.com"
+									>IIIT Agartala</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://allahabad.iiitiansnetwork.com"
+									>IIIT Allahabad</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://bhagalpur.iiitiansnetwork.com"
+									>IIIT Bhagalpur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://bhopal.iiitiansnetwork.com"
+									>IIIT Bhopal</a
+								>
+								<!--<a class="dropdown-item" target="_blank"  href="https://dharwad.iiitiansnetwork.com">IIIT Dharward</a> 
+                            <a class="dropdown-item" target="_blank"  href="https://guwahati.iiitiansnetwork.com">IIIT Guwahati</a> 
+                        -->
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://gwalior.iiitiansnetwork.com"
+									>IIITM Gwalior</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://jabalpur.iiitiansnetwork.com"
+									>IIITDM Jabalpur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kalyani.iiitiansnetwork.com"
+									>IIIT Kalyani</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kancheepuram.iiitiansnetwork.com"
+									>IIITDM Kancheepuram</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kota.iiitiansnetwork.com"
+									>IIIT Kota</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kurnool.iiitiansnetwork.com"
+									>IIITDM Kurnool</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://lucknow.iiitiansnetwork.com"
+									>IIIT Lucknow</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://manipur.iiitiansnetwork.com"
+									>IIIT Manipur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://nagpur.iiitiansnetwork.com"
+									>IIIT Nagpur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://pune.iiitiansnetwork.com"
+									>IIIT Pune</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://raichur.iiitiansnetwork.com"
+									>IIIT Raichur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://ranchi.iiitiansnetwork.com"
+									>IIIT Ranchi</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://sonepat.iiitiansnetwork.com"
+									>IIIT Sonepat</a
+								>
+								<!--<a class="dropdown-item" target="_blank"  href="https://sricity.iiitiansnetwork.com">IIIT Sri City</a> 
+                            <a class="dropdown-item" target="_blank"  href="https://surat.iiitiansnetwork.com">IIIT Surat</a>
+                        -->
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://tiruchirapalli.iiitiansnetwork.com"
+									>IIIT Tiruchirapalli</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://una.iiitiansnetwork.com"
+									>IIIT Una</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://vadodara.iiitiansnetwork.com"
+									>IIIT Vadodara</a
+								>
+							</div>
+						</li>
+						<li>
+							<a href="https://team.iiitiansnetwork.com/"
+								>Our Team</a
+							>
 						</li>
 						<li>
 							<a href="https://contact.iiitiansnetwork.com/"
@@ -393,7 +538,14 @@
 							style="border-top-right-radius: 15px"
 						/>
 					</div>
-					<h1 style="font-family:'Times New Roman', Times, serif;color:green">CHOICE FILLING TOOL</h1>
+					<h1
+						style="
+							font-family: 'Times New Roman', Times, serif;
+							color: green;
+						"
+					>
+						CHOICE FILLING TOOL
+					</h1>
 					<form action="" class="col-9 mb-5 text-center choice-form">
 						<select
 							name="colleges"
@@ -465,186 +617,261 @@
 							</option>
 							<option value="mech">Mechanical Engineering</option>
 						</select>
-						<button class="positive ui button col-xs-3"
-						class="btn btn-primary"
+						<button
+							class="positive ui button col-xs-3"
+							class="btn btn-primary"
 						>
-					 <a href="index.html" style="color:white">   Back</a>
-					</button>
-							<button class="positive ui button col-xs-3"
-								class="btn btn-primary"
-								onclick="myFunction()"
-								>
-								Predict Result
-							</button>
+							<a href="index.html" style="color: white"> Back</a>
+						</button>
+						<button
+							class="positive ui button col-xs-3"
+							class="btn btn-primary"
+							onclick="myFunction()"
+						>
+							Predict Result
+						</button>
 					</form>
 				</div>
 			</div>
-				<section id="myDIV" >
-					<div class="container" >
-			  
-						<div class="section-title" data-aos="fade-up" >
-							<p>Collages </p>
-						</div>
-
-						<table class="table" data-aos="fade-up" style="background-color: #fff;">
-							<thead class="thead-dark">
-							  <tr>
-								<th scope="col">S.NO</th>
-								<th scope="col">Institute</th>
-								<th scope="col">Branch</th>
-								<th scope="col">Round1<br>(Closing)</th>
-								<th scope="col">Round2<br>(Opening)</th>
-								<th scope="col">Round2<br>(Closing)</th>
-								<th scope="col">Round3<br>(Opening)</th>
-								<th scope="col">Round3<br>(Closing)</th>
-								<th scope="col">Round4<br>(Opening)</th>
-								<th scope="col">Round4<br>(Closing)</th>
-								<th scope="col">Round5<br>(Opening)</th>
-								<th scope="col">Round5<br>(Closing)</th>
-								<th scope="col">Round6<br>(Opening)</th>
-								<th scope="col">Round6<br>(Closing)</th>
-								<th scope="col">Round7<br>(Opening)</th>
-								<th scope="col">Round7<br>(Closing)</th>
-								
-							  </tr>
-							</thead>
-							<tbody   >
-							  <tr>
-								<th scope="row">1</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-							  </tr>
-							  <tr >
-								<th scope="row">2</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-							  </tr>
-							  <tr>
-								<th scope="row">3</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-							  </tr>
-							  <tr>
-								<th scope="row">4</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-							  </tr>
-							  <tr>
-								<th scope="row">5</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-							  </tr>
-							  <tr>
-								<th scope="row">6</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-							  </tr>
-							  <tr>
-								<th scope="row">7</th>
-								<td>IIITA</td>
-								<td>CSE</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-								<td>X</td>
-							  </tr>
-							</tbody>
-						  </table>
+			<section id="myDIV">
+				<div class="container">
+					<div class="section-title" data-aos="fade-up">
+						<p>Collages</p>
 					</div>
-				</section>
+					<div class="table-responsive">
+						<table
+							class="table table-striped"
+							data-aos="fade-up"
+							style="background-color: #fff"
+						>
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Institute</th>
+									<th scope="col">Branch</th>
+									<th scope="col">Round1</th>
+									<th scope="col">Round2</th>
+									<th scope="col">Round3</th>
+									<th scope="col">Round4</th>
+									<th scope="col">Round5</th>
+									<th scope="col">Round6</th>
+									<th scope="col">Round7</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td
+										rowspan="2"
+										style="
+											background-color: #343a40;
+											color: #ffffff;
+										"
+									>
+										IIITA
+									</td>
+									<td>CSE (open)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>CSE (close)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td
+										rowspan="2"
+										style="
+											background-color: #343a40;
+											color: #ffffff;
+										"
+									>
+										IIITA
+									</td>
+									<td>CSE (open)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>CSE (close)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td
+										rowspan="2"
+										style="
+											background-color: #343a40;
+											color: #ffffff;
+										"
+									>
+										IIITA
+									</td>
+									<td>CSE (open)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>CSE (close)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td
+										rowspan="2"
+										style="
+											background-color: #343a40;
+											color: #ffffff;
+										"
+									>
+										IIITA
+									</td>
+									<td>CSE (open)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>CSE (close)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td
+										rowspan="2"
+										style="
+											background-color: #343a40;
+											color: #ffffff;
+										"
+									>
+										IIITA
+									</td>
+									<td>CSE (open)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>CSE (close)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td
+										rowspan="2"
+										style="
+											background-color: #343a40;
+											color: #ffffff;
+										"
+									>
+										IIITA
+									</td>
+									<td>CSE (open)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>CSE (close)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td
+										rowspan="2"
+										style="
+											background-color: #343a40;
+											color: #ffffff;
+										"
+									>
+										IIITA
+									</td>
+									<td>CSE (open)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>CSE (close)</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+									<td>X</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
 		</main>
-			<script>
-				$('.ui.dropdown').dropdown();
-			</script>
+		<script>
+			$('.ui.dropdown').dropdown();
+		</script>
 
-			<!-- <div class="limiter">
+		<!-- <div class="limiter">
 				<div class="container-login100">
 					<div class="wrap-login100">
 						<div
@@ -894,7 +1121,6 @@
 					</div>
 				</div>
 			</div> -->
-		</main>
 		<!-- ======= Footer ======= -->
 
 		<!-- No need to change anything in footer area -->
