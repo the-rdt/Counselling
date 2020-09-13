@@ -1,4 +1,20 @@
-﻿/*--------------------------------------------------------------
+﻿/* page scrollbar start */
+::-webkit-scrollbar {
+	width: 7.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #c0c0c8;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #000a9b;
+}
+
+/* page scrollbar end */
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
