@@ -16,6 +16,7 @@ var selectedBranches = []; // stores current selected branches from the selected
 //  	"branch 1",
 // 		"branch 2"
 // ]
+var unsortedData = [];
 
 const colleges = document.getElementById('colleges');
 const branchHolder = document.getElementById('branch');
@@ -99,7 +100,7 @@ function predictResult() {
 		document.getElementById('choiceFillingData').innerHTML = '';
 		document.getElementById('tableLoader').style.display = 'block';
 		// console.log(allSelection);
-		let unsortedData = allSelection.map((branchValue) => {
+		unsortedData = allSelection.map((branchValue) => {
 			// branchValue = {
 			// 		collegeShortID : "iiitl",
 			// 		collegeFullName : "IIIT Lucknow",
@@ -191,11 +192,20 @@ function predictResult() {
 		Promise.all(unsortedData).then((toSort) => {
 			// console.log('resolved unsortedData', toSort);
 
-			toSort.sort(dynamicsort('open1'));
+			toSort.sort(dynamicsort('close1'));
 			console.log('choices', toSort);
+			displayTable(toSort);
+		});
+	} else {
+		alert(
+			'nahi majaak chal raha hai yahan\nbhai college aur gender to select karle pehle'
+		);
+	}
+}
 
-			toSort.forEach((tableRow) => {
-				var tableData = `
+function displayTable(dataoftable) {
+	dataoftable.forEach((tableRow) => {
+		var tableData = `
 			<tr>
 				<td
 					rowspan="2"
@@ -225,15 +235,22 @@ function predictResult() {
 				<td>${tableRow.close6}</td>
 				<td>${tableRow.close7}</td>
 			</tr>`;
-				document.getElementById('tableLoader').style.display = 'none';
-				document
-					.getElementById('choiceFillingData')
-					.insertAdjacentHTML('beforeend', tableData);
-			});
-		});
-	} else {
-		alert(
-			'nahi majaak chal raha hai yahan\nbhai college aur gender to select karle pehle'
-		);
-	}
+		document.getElementById('tableLoader').style.display = 'none';
+		document
+			.getElementById('choiceFillingData')
+			.insertAdjacentHTML('beforeend', tableData);
+	});
 }
+
+// sort button
+document.getElementById('sort').onchange = () => {
+	// console.log(document.getElementById('sort').value);
+	document.getElementById('choiceFillingData').innerHTML = '';
+	Promise.all(unsortedData).then((toSort) => {
+		// console.log('resolved unsortedData', toSort);
+
+		toSort.sort(dynamicsort(document.getElementById('sort').value));
+		console.log('choices', toSort);
+		displayTable(toSort);
+	});
+};
