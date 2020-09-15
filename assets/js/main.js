@@ -245,3 +245,13 @@ window.onload = function() {
   //css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+/*==============hide button==============*/
+function hideDiv() {
+  var x = document.getElementById("webteam");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
