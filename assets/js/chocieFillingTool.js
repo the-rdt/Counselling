@@ -16,6 +16,7 @@ var selectedBranches = []; // stores current selected branches from the selected
 //  	"branch 1",
 // 		"branch 2"
 // ]
+var unsortedData = [];
 
 const colleges = document.getElementById('colleges');
 const branchHolder = document.getElementById('branch');
@@ -99,7 +100,7 @@ function predictResult() {
 		document.getElementById('choiceFillingData').innerHTML = '';
 		document.getElementById('tableLoader').style.display = 'block';
 		// console.log(allSelection);
-		let unsortedData = allSelection.map((branchValue) => {
+		unsortedData = allSelection.map((branchValue) => {
 			// branchValue = {
 			// 		collegeShortID : "iiitl",
 			// 		collegeFullName : "IIIT Lucknow",
@@ -124,34 +125,28 @@ function predictResult() {
 			// 			closing : 12847
 			// 		}
 			// ]
-			let receivedData = getData()
-				.then((openCloseValue) => {
-					// console.log(openCloseValue);
-					return {
-						collegeShordID: branchValue.collegeShordID,
-						collegeFullName: branchValue.collegeFullName,
-						branch: branchValue.branch,
-						open1: openCloseValue[0].opening,
-						close1: openCloseValue[0].closing,
-						open2: openCloseValue[1].opening,
-						close2: openCloseValue[1].closing,
-						open3: openCloseValue[2].opening,
-						close3: openCloseValue[2].closing,
-						open4: openCloseValue[3].opening,
-						close4: openCloseValue[3].closing,
-						open5: openCloseValue[4].opening,
-						close5: openCloseValue[4].closing,
-						open6: openCloseValue[5].opening,
-						close6: openCloseValue[5].closing,
-						open7: openCloseValue[6].opening,
-						close7: openCloseValue[6].closing,
-					};
-				})
-				.catch((error) => {
-					alert(
-						"we think internet broke his leg\nso he couldn't deliver the request\nplease refresh page and try again"
-					);
-				});
+			let receivedData = getData().then((openCloseValue) => {
+				// console.log(openCloseValue);
+				return {
+					collegeShordID: branchValue.collegeShordID,
+					collegeFullName: branchValue.collegeFullName,
+					branch: branchValue.branch,
+					open1: openCloseValue[0].opening,
+					close1: openCloseValue[0].closing,
+					open2: openCloseValue[1].opening,
+					close2: openCloseValue[1].closing,
+					open3: openCloseValue[2].opening,
+					close3: openCloseValue[2].closing,
+					open4: openCloseValue[3].opening,
+					close4: openCloseValue[3].closing,
+					open5: openCloseValue[4].opening,
+					close5: openCloseValue[4].closing,
+					open6: openCloseValue[5].opening,
+					close6: openCloseValue[5].closing,
+					open7: openCloseValue[6].opening,
+					close7: openCloseValue[6].closing,
+				};
+			});
 			// console.log('receivedData', receivedData);
 			return receivedData;
 		});
@@ -188,14 +183,74 @@ function predictResult() {
 		// 	});
 		// console.log('finalData', finalData);
 		////////////////////////////////////////////////////////////////////////////////////////////////////
-		Promise.all(unsortedData).then((toSort) => {
-			// console.log('resolved unsortedData', toSort);
 
-			toSort.sort(dynamicsort('open1'));
-			console.log('choices', toSort);
+		Promise.all(unsortedData)
+			.then((toSort) => {
+				// console.log('resolved unsortedData', toSort);
 
-			toSort.forEach((tableRow) => {
-				var tableData = `
+				toSort.sort(dynamicsort('close1'));
+				console.log('choices', toSort);
+				displayTable(toSort);
+			})
+			.catch((error) => {
+				alert(
+					"we think internet broke his leg\nso he couldn't deliver the request\nplease refresh page and try again"
+				);
+			});
+
+		// Promise.all(unsortedData).then((toSort) => {
+		// 	// console.log('resolved unsortedData', toSort);
+
+		// 	toSort.sort(dynamicsort('open1'));
+		// 	console.log('choices', toSort);
+
+		// 	toSort.forEach((tableRow) => {
+		// 		var tableData = `
+		// 	<tr>
+		// 		<td
+		// 			rowspan="2"
+		// 			style="
+		// 				background-color: #343a40;
+		// 				color: #ffffff;
+		// 			"
+		// 		>
+		// 			${tableRow.collegeFullName}
+		// 		</td>
+		// 		<td>${tableRow.branch} (open)</td>
+		// 		<td>${tableRow.open1}</td>
+		// 		<td>${tableRow.open2}</td>
+		// 		<td>${tableRow.open3}</td>
+		// 		<td>${tableRow.open4}</td>
+		// 		<td>${tableRow.open5}</td>
+		// 		<td>${tableRow.open6}</td>
+		// 		<td>${tableRow.open7}</td>
+		// 	</tr>
+		// 	<tr>
+		// 		<td>${tableRow.branch} (close)</td>
+		// 		<td>${tableRow.close1}</td>
+		// 		<td>${tableRow.close2}</td>
+		// 		<td>${tableRow.close3}</td>
+		// 		<td>${tableRow.close4}</td>
+		// 		<td>${tableRow.close5}</td>
+		// 		<td>${tableRow.close6}</td>
+		// 		<td>${tableRow.close7}</td>
+		// 	</tr>`;
+		// 		document.getElementById('tableLoader').style.display = 'none';
+		// 		document
+		// 			.getElementById('choiceFillingData')
+		// 			.insertAdjacentHTML('beforeend', tableData);
+		// 	});
+		// });
+	} else {
+		alert(
+			'nahi majaak chal raha hai yahan\nbhai college aur gender to select karle pehle'
+		);
+	}
+}
+
+function displayTable(dataoftable) {
+	dataoftable.forEach((tableRow) => {
+		var tableData = `
 			<tr>
 				<td
 					rowspan="2"
@@ -225,15 +280,22 @@ function predictResult() {
 				<td>${tableRow.close6}</td>
 				<td>${tableRow.close7}</td>
 			</tr>`;
-				document.getElementById('tableLoader').style.display = 'none';
-				document
-					.getElementById('choiceFillingData')
-					.insertAdjacentHTML('beforeend', tableData);
-			});
-		});
-	} else {
-		alert(
-			'nahi majaak chal raha hai yahan\nbhai college aur gender to select karle pehle'
-		);
-	}
+		document.getElementById('tableLoader').style.display = 'none';
+		document
+			.getElementById('choiceFillingData')
+			.insertAdjacentHTML('beforeend', tableData);
+	});
 }
+
+// sort button
+document.getElementById('sort').onchange = () => {
+	// console.log(document.getElementById('sort').value);
+	document.getElementById('choiceFillingData').innerHTML = '';
+	Promise.all(unsortedData).then((toSort) => {
+		// console.log('resolved unsortedData', toSort);
+
+		toSort.sort(dynamicsort(document.getElementById('sort').value));
+		console.log('choices', toSort);
+		displayTable(toSort);
+	});
+};
