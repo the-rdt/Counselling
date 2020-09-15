@@ -2,12 +2,43 @@
  * @prettier
  */
 var iiitData;
-var allSelection = []; //stores all selected colleges-with-branches in form of objescts
+var allSelection = []; //stores all selected colleges-with-branches by user in form of objescts
+// allSelection = [
+//    {
+// 		collegeShortID : "iiitl",
+// 		collegeFullName : "IIIT Lucknow",
+// 		branch : "Computer Science and Engineering"
+//    }
+// ]
+//
 var selectedBranches = []; // stores current selected branches from the selected college
+//  selectedBranches = [
+//  	"branch 1",
+// 		"branch 2"
+// ]
 
 const colleges = document.getElementById('colleges');
 const branchHolder = document.getElementById('branch');
 const textarea = document.getElementById('all-selection');
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// very important custom sort function
+function dynamicsort(property) {
+	var sort_order = 1;
+	return function (a, b) {
+		// a should come before b in the sorted order
+		if (a[property] < b[property]) {
+			return -1 * sort_order;
+			// a should come after b in the sorted order
+		} else if (a[property] > b[property]) {
+			return 1 * sort_order;
+			// a and b are the same
+		} else {
+			return 0 * sort_order;
+		}
+	};
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $.getJSON('./assets/iiitList.json', (data) => {
 	console.log(data.length);
@@ -44,18 +75,14 @@ const addCollege = () => {
 
 	// console.log(selectedBranches);
 
-	//so that on pressing add more than once without changing selection doesn't add same thing again and agian
-	if (selectedBranches.length > 0) {
+	let currBranches = selectedBranches.map((value) => {
+		// push each selected branch with college name and shortID as a object in allSelection
 		allSelection.push({
 			collegeShordID: colleges.options[colleges.selectedIndex].value,
-			allbranches: selectedBranches,
+			collegeFullName: colleges.options[colleges.selectedIndex].text,
+			branch: value,
 		});
-	}
-
-	// console.log(allSelection);
-
-	let currBranches = selectedBranches.map((vlu) => {
-		return `${colleges.options[colleges.selectedIndex].text} - ${vlu}\n`;
+		return `${colleges.options[colleges.selectedIndex].text} - ${value}\n`;
 	});
 	textarea.append(currBranches); // display selection in textarea
 
@@ -65,6 +92,148 @@ const addCollege = () => {
 
 function predictResult() {
 	event.preventDefault();
-	document.getElementById('myDIV').style.display = 'block';
-	console.log(allSelection);
+	const category = document.getElementById('category').value;
+	// console.log(category);
+	if (allSelection.length > 0 && category) {
+		document.getElementById('myDIV').style.display = 'block';
+		document.getElementById('choiceFillingData').innerHTML = '';
+		document.getElementById('tableLoader').style.display = 'block';
+		// console.log(allSelection);
+		let unsortedData = allSelection.map((branchValue) => {
+			// branchValue = {
+			// 		collegeShortID : "iiitl",
+			// 		collegeFullName : "IIIT Lucknow",
+			// 		branch : "Computer Science and Engineering"
+			// }
+			// console.log(value.collegeShordID, value.branch);
+
+			const url = `https://josaa.herokuapp.com/v1/josaa-data?institute=${branchValue.collegeShordID}&branch=${branchValue.branch}&category=${category}&year=2019`;
+
+			// get data from server
+			let getData = async () => {
+				let openCloseData = await fetch(url).then((response) => {
+					return response.json();
+				});
+				// console.log(openCloseData);
+				return openCloseData;
+			};
+			// openCloseData = [
+			// 		{
+			// 			round : "Round1",
+			// 			opening : 8078,
+			// 			closing : 12847
+			// 		}
+			// ]
+			let receivedData = getData()
+				.then((openCloseValue) => {
+					// console.log(openCloseValue);
+					return {
+						collegeShordID: branchValue.collegeShordID,
+						collegeFullName: branchValue.collegeFullName,
+						branch: branchValue.branch,
+						open1: openCloseValue[0].opening,
+						close1: openCloseValue[0].closing,
+						open2: openCloseValue[1].opening,
+						close2: openCloseValue[1].closing,
+						open3: openCloseValue[2].opening,
+						close3: openCloseValue[2].closing,
+						open4: openCloseValue[3].opening,
+						close4: openCloseValue[3].closing,
+						open5: openCloseValue[4].opening,
+						close5: openCloseValue[4].closing,
+						open6: openCloseValue[5].opening,
+						close6: openCloseValue[5].closing,
+						open7: openCloseValue[6].opening,
+						close7: openCloseValue[6].closing,
+					};
+				})
+				.catch((error) => {
+					alert(
+						"we think internet broke his leg\nso he couldn't deliver the request\nplease refresh page and try again"
+					);
+				});
+			// console.log('receivedData', receivedData);
+			return receivedData;
+		});
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		// bad way of doing same thing. retain here for future reference to know what not to do
+		// var unsortedData = fetch(url)
+		// 	.then((response) => {
+		// 		// console.log(response);
+		// 		return response.json();
+		// 	})
+		// 	.then((data) => {
+		// 		// console.log(data);
+		// 		receivedData.push({
+		// 			collegeID: value.collegeShordID,
+		// 			college: value.college,
+		// 			branch: value.branch,
+		// 			open1: data[0].opening,
+		// 			close1: data[0].closing,
+		// 			open2: data[1].opening,
+		// 			close2: data[1].closing,
+		// 			open3: data[2].opening,
+		// 			close3: data[2].closing,
+		// 			open4: data[3].opening,
+		// 			close4: data[3].closing,
+		// 			open5: data[4].opening,
+		// 			close5: data[4].closing,
+		// 			open6: data[5].opening,
+		// 			close6: data[5].closing,
+		// 			open7: data[6].opening,
+		// 			close7: data[6].closing,
+		// 		});
+		// 		console.log(receivedData);
+		// 		return receivedData;
+		// 	});
+		// console.log('finalData', finalData);
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		Promise.all(unsortedData).then((toSort) => {
+			// console.log('resolved unsortedData', toSort);
+
+			toSort.sort(dynamicsort('open1'));
+			console.log('choices', toSort);
+
+			toSort.forEach((tableRow) => {
+				var tableData = `
+			<tr>
+				<td
+					rowspan="2"
+					style="
+						background-color: #343a40;
+						color: #ffffff;
+					"
+				>
+					${tableRow.collegeFullName}
+				</td>
+				<td>${tableRow.branch} (open)</td>
+				<td>${tableRow.open1}</td>
+				<td>${tableRow.open2}</td>
+				<td>${tableRow.open3}</td>
+				<td>${tableRow.open4}</td>
+				<td>${tableRow.open5}</td>
+				<td>${tableRow.open6}</td>
+				<td>${tableRow.open7}</td>
+			</tr>
+			<tr>
+				<td>${tableRow.branch} (close)</td>
+				<td>${tableRow.close1}</td>
+				<td>${tableRow.close2}</td>
+				<td>${tableRow.close3}</td>
+				<td>${tableRow.close4}</td>
+				<td>${tableRow.close5}</td>
+				<td>${tableRow.close6}</td>
+				<td>${tableRow.close7}</td>
+			</tr>`;
+				document.getElementById('tableLoader').style.display = 'none';
+				document
+					.getElementById('choiceFillingData')
+					.insertAdjacentHTML('beforeend', tableData);
+			});
+		});
+	} else {
+		alert(
+			'nahi majaak chal raha hai yahan\nbhai college aur gender to select karle pehle'
+		);
+	}
 }

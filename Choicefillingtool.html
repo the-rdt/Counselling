@@ -111,6 +111,7 @@
 		<!-- Main CSS File -->
 		<link href="assets/css/main.css" rel="stylesheet" />
 		<link href="assets/css/rankpredictor.css" rel="stylesheet" />
+		<link href="assets/css/loader.css" rel="stylesheet" />
 		<!-- <link href="assets/css/custom.css" rel="stylesheet" /> ============= not needed on this page-->
 		<!-- <link href="assets/css/footer.css" rel="stylesheet" /> ============= not needed on this page -->
 		<!-- <link href="assets/css/heading.css" rel="stylesheet" /> ============= not needed on this page-->
@@ -544,6 +545,7 @@
 						/>
 					</div>
 					<h1
+						class="col-12 text-center"
 						style="
 							font-family: 'Times New Roman', Times, serif;
 							color: green;
@@ -551,18 +553,24 @@
 					>
 						CHOICE FILLING TOOL
 					</h1>
-					<style>
-						.none {
-							display: none !important;
-						}
-					</style>
+					<h6>
+						1. Select a College
+						<br />
+						2. Select one or more branches
+						<br />
+						3. Click "Add" to add the selection in search list
+						<br />
+						4. Repeat steps 2 and 3 to select more colleges and
+						branches
+						<br />
+						5. Select category and click "Predict Result"
+					</h6>
 					<form action="" class="col-9 mb-5 text-center choice-form">
 						<select
 							name="colleges"
 							class="ui fluid dropdown my-4"
 							id="colleges"
 						>
-							<option value="">Select preferred colleges</option>
 							<!-- <option value="agartala">IIIT Agartala</option>
 							<option value="allahabad">IIIT Allahabad</option>
 							<option value="bhagalpur">IIIT Bhagalpur</option>
@@ -609,7 +617,7 @@
 							Add
 						</button>
 						<textarea
-							class="col-12 mt-3"
+							class="col-12 mt-3 p-3"
 							id="all-selection"
 							rows="5"
 							placeholder="All selected colleges with branches"
@@ -643,7 +651,7 @@
 							<option value="sc">SC</option>
 							<option value="st">ST</option>
 						</select>
-						<select
+						<!-- <select
 							name="gender"
 							id="gender"
 							class="ui fluid dropdown my-4"
@@ -651,7 +659,7 @@
 							<option value="">Gender</option>
 							<option value="m">Gender-Neutral</option>
 							<option value="f">Female only</option>
-						</select>
+						</select> -->
 						<button
 							class="positive ui button col-xs-3"
 							class="btn btn-primary"
@@ -692,7 +700,8 @@
 									<th scope="col">Round7</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="choiceFillingData">
+								<!-- table row structure
 								<tr>
 									<td
 										rowspan="2"
@@ -714,190 +723,19 @@
 								</tr>
 								<tr>
 									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr> -->
 							</tbody>
 						</table>
+						<div class="loader" id="tableLoader">
+							<div class="loader-text">Loading...</div>
+						</div>
 					</div>
 				</div>
 			</section>
