@@ -177,13 +177,5 @@ body, html {
   }
 }
 
-/*==============hide button==============*/
 
-function hideDiv() {
-  var x = document.getElementById("webteam");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+
