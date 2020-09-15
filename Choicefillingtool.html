@@ -111,6 +111,7 @@
 		<!-- Main CSS File -->
 		<link href="assets/css/main.css" rel="stylesheet" />
 		<link href="assets/css/rankpredictor.css" rel="stylesheet" />
+		<link href="assets/css/loader.css" rel="stylesheet" />
 		<!-- <link href="assets/css/custom.css" rel="stylesheet" /> ============= not needed on this page-->
 		<!-- <link href="assets/css/footer.css" rel="stylesheet" /> ============= not needed on this page -->
 		<!-- <link href="assets/css/heading.css" rel="stylesheet" /> ============= not needed on this page-->
@@ -220,6 +221,18 @@
 			crossorigin="anonymous"
 		></script>
 
+		<!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+			integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g=="
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
+			integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw=="
+			crossorigin="anonymous"
+		/> -->
+
 		<!--================= Loader Part start ===============-->
 		<script type="text/javascript">
 			$(window).load(function () {
@@ -294,13 +307,6 @@
 				text-align: center;
 			}
 		</style>
-		<!--=====================JS FOR SUBMIT BUTTON=====================-->
-		<script>
-			function myFunction(event) {
-				event.preventDefault();
-				document.getElementById('myDIV').style.display = 'block';
-			}
-		</script>
 		<!-- auto hide navigation on scroll -->
 		<script type="text/javascript">
 			var prevScrollpos = window.pageYOffset;
@@ -332,7 +338,7 @@
 
 				<nav class="nav-menu d-none d-lg-block">
 					<ul>
-						<li><a href="#">Home</a></li>
+						<li><a href="https://iiitiansnetwork.com">Home</a></li>
 						<!--li>
                     <li><a href="">News</a></li>
                     <li class="drop-down"><a href="">Login</a>
@@ -348,9 +354,9 @@
                             </li>
                         </ul>
                     </li-->
-						<li class="active" >
+						<li class="active">
 							<a
-								 href="https://jeecounselling.iiitiansnetwork.com/"
+								href="https://jeecounselling.iiitiansnetwork.com/"
 								>Jee Counselling</a
 							>
 						</li>
@@ -400,9 +406,19 @@
 									href="https://bhopal.iiitiansnetwork.com"
 									>IIIT Bhopal</a
 								>
-							<a class="dropdown-item" target="_blank"  href="https://dharwad.iiitiansnetwork.com">IIIT Dharward</a> 
-                            <a class="dropdown-item" target="_blank"  href="https://guwahati.iiitiansnetwork.com">IIIT Guwahati</a> 
-                        
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://dharwad.iiitiansnetwork.com"
+									>IIIT Dharward</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://guwahati.iiitiansnetwork.com"
+									>IIIT Guwahati</a
+								>
+
 								<a
 									class="dropdown-item"
 									target="_blank"
@@ -487,9 +503,19 @@
 									href="https://sonepat.iiitiansnetwork.com"
 									>IIIT Sonepat</a
 								>
-							<a class="dropdown-item" target="_blank"  href="https://sricity.iiitiansnetwork.com">IIIT Sri City</a> 
-                            <a class="dropdown-item" target="_blank"  href="https://surat.iiitiansnetwork.com">IIIT Surat</a>
-                       
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://sricity.iiitiansnetwork.com"
+									>IIIT Sri City</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://surat.iiitiansnetwork.com"
+									>IIIT Surat</a
+								>
+
 								<a
 									class="dropdown-item"
 									target="_blank"
@@ -544,6 +570,7 @@
 						/>
 					</div>
 					<h1
+						class="col-12 text-center"
 						style="
 							font-family: 'Times New Roman', Times, serif;
 							color: green;
@@ -551,15 +578,25 @@
 					>
 						CHOICE FILLING TOOL
 					</h1>
+					<h6>
+						1. Select a College
+						<br />
+						2. Select one or more branches
+						<br />
+						3. Click "Add" to add the selection in search list
+						<br />
+						4. Repeat steps 2 and 3 to select more colleges and
+						branches
+						<br />
+						5. Select category and click "Predict Result"
+					</h6>
 					<form action="" class="col-9 mb-5 text-center choice-form">
 						<select
 							name="colleges"
-							multiple
 							class="ui fluid dropdown my-4"
 							id="colleges"
 						>
-							<option value="">Select preferred colleges</option>
-							<option value="agartala">IIIT Agartala</option>
+							<!-- <option value="agartala">IIIT Agartala</option>
 							<option value="allahabad">IIIT Allahabad</option>
 							<option value="bhagalpur">IIIT Bhagalpur</option>
 							<option value="bhopal">IIIT Bhopal</option>
@@ -585,28 +622,7 @@
 								IIIT Tiruchirapalli
 							</option>
 							<option value="una">IIIT Una</option>
-							<option value="vadodara">IIIT Vadodara</option>
-						</select>
-						<select
-							name="colleges"
-							class="ui fluid dropdown my-4"
-							id="colleges"
-						>
-							<option value="">Choose your Category</option>
-							<option value="gen">General</option>
-							<option value="ews">General-EWS</option>
-							<option value="obcncl">OBC-NCL</option>
-							<option value="sc">SC</option>
-							<option value="st">ST</option>
-						</select>
-						<select
-							name="gender"
-							id="gender"
-							class="ui fluid dropdown my-4"
-						>
-							<option value="">Gender</option>
-							<option value="m">Gender-Neutral</option>
-							<option value="f">Female only</option>
+							<option value="vadodara">IIIT Vadodara</option> -->
 						</select>
 						<select
 							name="branch"
@@ -615,13 +631,60 @@
 							id="branch"
 						>
 							<option value="">Select preferred Branches</option>
-							<option value="cs">Computer Science</option>
+							<!-- <option value="cs">Computer Science</option>
 							<option value="it">Information Technology</option>
 							<option value="ece">
 								Electronics and Communication Engineering
 							</option>
-							<option value="mech">Mechanical Engineering</option>
+							<option value="mech">Mechanical Engineering</option> -->
 						</select>
+						<button class="btn btn-primary" onclick="addCollege()">
+							Add
+						</button>
+						<textarea
+							class="col-12 mt-3 p-3"
+							id="all-selection"
+							rows="5"
+							placeholder="All selected colleges with branches"
+							disabled
+							style="
+								resize: none;
+								background-color: #f2f2f4;
+								border: 1px solid rgba(34, 36, 38, 0.15);
+							"
+						></textarea>
+						<style>
+							textarea::-webkit-scrollbar {
+								width: 7px;
+							}
+							textarea::-webkit-scrollbar-track {
+								background-color: #c0c0c8;
+							}
+							textarea::-webkit-scrollbar-thumb {
+								background-color: #000a9b;
+							}
+						</style>
+						<select
+							name="colleges"
+							class="ui fluid dropdown my-4"
+							id="category"
+						>
+							<option value="">Choose your Category</option>
+							<option value="gen">General</option>
+							<option value="ews">General-EWS</option>
+							<option value="obcncl">OBC-NCL</option>
+							<option value="sc">SC</option>
+							<option value="st">ST</option>
+						</select>
+						<!-- <select
+							name="gender"
+							id="gender"
+							class="ui fluid dropdown my-4"
+						>
+							<option value="">Gender</option>
+							<option value="m">Gender-Neutral</option>
+							<option value="f">Female only</option>
+						</select> -->
 						<button
 							class="positive ui button col-xs-3"
 							class="btn btn-primary"
@@ -631,7 +694,7 @@
 						<button
 							class="positive ui button col-xs-3"
 							class="btn btn-primary"
-							onclick="myFunction()"
+							onclick="predictResult()"
 						>
 							Predict Result
 						</button>
@@ -643,6 +706,19 @@
 					<div class="section-title" data-aos="fade-up">
 						<p>Collages</p>
 					</div>
+					<select
+						id="sort"
+						class="col-6 col-sm-4 ui fluid dropdown mx-auto my-3"
+					>
+						<option value="">Sort by round</option>
+						<option value="close1">Round - 1</option>
+						<option value="close2">Round - 2</option>
+						<option value="close3">Round - 3</option>
+						<option value="close4">Round - 4</option>
+						<option value="close5">Round - 5</option>
+						<option value="close6">Round - 6</option>
+						<option value="close7">Round - 7</option>
+					</select>
 					<div class="table-responsive">
 						<table
 							class="table table-striped"
@@ -662,7 +738,8 @@
 									<th scope="col">Round7</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="choiceFillingData">
+								<!-- table row structure
 								<tr>
 									<td
 										rowspan="2"
@@ -684,190 +761,19 @@
 								</tr>
 								<tr>
 									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td
-										rowspan="2"
-										style="
-											background-color: #343a40;
-											color: #ffffff;
-										"
-									>
-										IIITA
-									</td>
-									<td>CSE (open)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
-								<tr>
-									<td>CSE (close)</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-									<td>X</td>
-								</tr>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+									<td>x</td>
+								</tr> -->
 							</tbody>
 						</table>
+						<div class="loader" id="tableLoader">
+							<div class="loader-text">Loading...</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -875,257 +781,6 @@
 		<script>
 			$('.ui.dropdown').dropdown();
 		</script>
-
-		<!-- <div class="limiter">
-				<div class="container-login100">
-					<div class="wrap-login100">
-						<div
-							class="login100-form-title"
-							style="background-image: url('img/bg-01.jpg')"
-						>
-							<span class="login100-form-title-1">
-								<h1>
-									<br />
-									<b
-										><span
-											class="txt-rotate"
-											data-period="2000"
-											data-rotate='[ "CHOICE FILLING TOOL"]'
-										></span
-									></b>
-								</h1>
-							</span>
-							<br />
-							<!--	<span style="color:whitesmoke;font-family: Arial, Helvetica, sans-serif;font-size: 15px;"><p><b>ADD YOUR USER GUIDE HERE</b></p></span>-------- >
-						</div>
-						<form>
-							<div class="card container justify-content-center">
-								<br />
-								<br />
-								<div class="col-xs-8 center-block">
-									<div
-										class="selectBox"
-										onclick="showCheckboxes()"
-									>
-										<select
-											required
-											class="form-control"
-											id="textTWO"
-										>
-											<option>
-												Choose your preferred Collages
-											</option>
-										</select>
-										<div class="overSelect"></div>
-									</div>
-									<div id="checkBoxes">
-										<label for="first">
-											<input type="checkbox" id="first" />
-											IIIT Agartala
-										</label>
-
-										<label for="second">
-											<input
-												type="checkbox"
-												id="second"
-											/>
-											IIIT Allahabad
-										</label>
-										<label for="third">
-											<input type="checkbox" id="third" />
-											IIIT Bhagalpur
-										</label>
-										<label for="fourth">
-											<input
-												type="checkbox"
-												id="fourth"
-											/>
-											IIIT Bhopal
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Dharwad
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Guwahati
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Gwalior
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Jabalpur
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Kalyani
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Kanchipuram
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Kota
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Kurnool
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Lucknow
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Nagpur
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Pune
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Raichur
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Ranchi
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Sonepat
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Sricity
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Surat
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Tiruchirapalli
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Una
-										</label>
-										<label for="fifth">
-											<input type="checkbox" id="fidth" />
-											IIIT Vadodara
-										</label>
-									</div>
-								</div>
-								<br />
-								<div class="col-xs-8 center-block">
-									<select
-										required
-										class="form-control"
-										id="textTWO"
-									>
-										<option
-											value=""
-											disabled
-											selected
-											hidden
-										>
-											Choose your Category
-										</option>
-										<option>General</option>
-										<option>General-EWS</option>
-										<option>OBC-NCL</option>
-										<option>SC</option>
-										<option>ST</option>
-									</select>
-									<br />
-								</div>
-								<div class="col-xs-8 center-block">
-									<select
-										required
-										class="form-control"
-										id="textTWO"
-									>
-										<option
-											value=""
-											disabled
-											selected
-											hidden
-										>
-											Choose your Seat-pool
-										</option>
-										<option>Genger-Neutral</option>
-										<option>Female Only</option>
-									</select>
-									<br />
-								</div>
-								<div class="col-xs-8 center-block">
-									<div
-										class="selectBox"
-										onclick="showCheckboxes1()"
-									>
-										<select
-											required
-											class="form-control"
-											id="textTWO"
-										>
-											<option>
-												Choose your preferred branch
-											</option>
-										</select>
-										<div class="overSelect"></div>
-									</div>
-
-									<div id="checkBoxes1">
-										<label for="first">
-											<input type="checkbox" id="first" />
-											Computer science anf engineering
-										</label>
-
-										<label for="second">
-											<input
-												type="checkbox"
-												id="second"
-											/>
-											Electronics and Communication
-											engineering
-										</label>
-										<label for="third">
-											<input type="checkbox" id="third" />
-											Information Technology
-										</label>
-										<label for="fourth">
-											<input
-												type="checkbox"
-												id="fourth"
-											/>
-											Mechanical Engineering
-										</label>
-									</div>
-								</div>
-								<br />
-								<div class="center-block">
-									<button
-										type="submit"
-										class="btn btn-primary"
-									>
-										Submit
-									</button>
-								</div>
-								<br />
-								<div class="center-block">
-									<span id="spanResult"> </span>
-									<br />
-									<br />
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div> -->
 		<!-- ======= Footer ======= -->
 
 		<!-- No need to change anything in footer area -->
@@ -1228,7 +883,7 @@
 								<li>
 									<i class="bx bx-chevron-right"></i>
 									<a
-										 href="http://team.iiitiansnetwork.com/#design"
+										href="http://team.iiitiansnetwork.com/#design"
 										>Design Team</a
 									>
 								</li>
@@ -1331,6 +986,7 @@
 
 		<!-- Template Main JS File -->
 		<script src="assets/js/main.js"></script>
+		<script src="./assets/js/chocieFillingTool.js"></script>
 
 		<!-- Custom JS files -->
 		<!-- <script src="assets/js/custom.js"></script> -->

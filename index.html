@@ -1,96 +1,135 @@
+<!-- @prettier -->
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<!-- All credit of web development  goes to Reha IIIT Dharwad 2019 Batch -->
 
-<head>
-	<!-- All credit of web development  goes to Reha IIIT Dharwad 2019 Batch -->
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-166050406-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-	<meta charset="utf-8" />
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166050406-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
+			gtag('config', 'UA-166050406-1');
+		</script>
 
-		gtag("config", "UA-166050406-1");
-	</script>
+		<!-- Title of your page: add the name of your IIIT-->
+		<title>Counselling | IIITians Network</title>
+		<meta
+			content="This is All IIIT page of the community IIITians Network"
+			name="descriptison"
+		/>
+		<!--You have to update the name of your IIIT in both these lines -->
+		<meta content="IIITians Network - All IIIT" name="keywords" />
 
-	<!-- Title of your page: add the name of your IIIT-->
-	<title>Counselling | IIITians Network</title>
-	<meta content="This is All IIIT page of the community IIITians Network" name="descriptison" />
-	<!--You have to update the name of your IIIT in both these lines -->
-	<meta content="IIITians Network - All IIIT" name="keywords" />
+		<!-- Favicons -->
+		<link href="img/logo/iiitian.png" rel="icon" />
+		<link href="img/logo/iiitian.png" rel="apple-touch-icon" />
 
-	<!-- Favicons -->
-	<link href="img/logo/iiitian.png" rel="icon" />
-	<link href="img/logo/iiitian.png" rel="apple-touch-icon" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Roboto&display=swap"
-		rel="stylesheet" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<!-- Vendor CSS Files -->
+		<link
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+		<link
+			href="assets/vendor/boxicons/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+		<link
+			href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
+			rel="stylesheet"
+		/>
+		<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
-	<!-- Vendor CSS Files -->
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
-	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-	<link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
-	<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
-	<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+		<!-- Animation for text -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Anton"
+		/>
+		<link rel="stylesheet" href="./style.css" />
 
-	<!-- Animation for text -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" />
-	<link rel="stylesheet" href="./style.css" />
+		<!-- Font awesome icons-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 
-	<!-- Font awesome icons-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	
-	<!-- Main CSS File -->
-	<link href="assets/css/style.css" rel="stylesheet" />
-	<link href="assets/css/custom.css" rel="stylesheet" />
-	<link href="assets/css/footer.css" rel="stylesheet" />
-	<link rel="stylesheet" href="assets/css/heading.css" type="text/css" />
-	<link href="custom.css" rel="stylesheet" />
+		<!-- Main CSS File -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<link href="assets/css/custom.css" rel="stylesheet" />
+		<link href="assets/css/footer.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/heading.css" type="text/css" />
+		<link href="custom.css" rel="stylesheet" />
 
-	<!-- Carousel files -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<!-- Carousel files -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-	<!--================================== STUDENT's LIFE CSS FILES =======================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/css/studentsLife.css" />
-	<!--================================== STUDENT's LIFE CSS FILE END =======================================================-->
+		<!--================================== STUDENT's LIFE CSS FILES =======================================================-->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/css/studentsLife.css"
+		/>
+		<!--================================== STUDENT's LIFE CSS FILE END =======================================================-->
 
-	<!--==================================Counter Up files ====================-->
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<!--==================================Counter Up files ====================-->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		<script
+			src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			crossorigin="anonymous"
+		></script>
 
-	<!--==================================Counter Up files over ==============-->
-	<!--================= Loader Part start ===============-->
-	<script type="text/javascript">
-        $(window).load(function () {
-            $(".se-pre-con").fadeOut("slow");;
-        });
-    </script>
-	<style>
-		.no-js #loader {
-			display: none;
-		}
+		<!--==================================Counter Up files over ==============-->
+		<!--================= Loader Part start ===============-->
+		<script type="text/javascript">
+			$(window).load(function () {
+				$('.se-pre-con').fadeOut('slow');
+			});
+		</script>
+		<style>
+			.no-js #loader {
+				display: none;
+			}
 
-		.js #loader {
-			display: block;
-			position: absolute;
-			left: 100px;
-			top: 0;
-		}
+			.js #loader {
+				display: block;
+				position: absolute;
+				left: 100px;
+				top: 0;
+			}
 
-		.se-pre-con {
+			.se-pre-con {
 				position: fixed;
 				left: 0px;
 				top: 0px;
@@ -104,756 +143,1412 @@
 				.se-pre-con {
 					background-size: contain;
 				}
-			}	
-		/* black font in all iiit dropdown */
-        .all-iiit a {
-            color: #121212;
-        }	
-	</style>
-	<!-- =================== Loader part ended=================== -->
-	 <!-- auto hide navigation on scroll -->
-    <script type="text/javascript"> 
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("header").style.top = "0";
-        } else {
-            document.getElementById("header").style.top = "-75px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-    </script>
-</head>
+			}
+			/* black font in all iiit dropdown */
+			.all-iiit a {
+				color: #121212;
+			}
+		</style>
+		<!-- =================== Loader part ended=================== -->
+		<!-- auto hide navigation on scroll -->
+		<script type="text/javascript">
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function () {
+				var currentScrollPos = window.pageYOffset;
+				if (prevScrollpos > currentScrollPos) {
+					document.getElementById('header').style.top = '0';
+				} else {
+					document.getElementById('header').style.top = '-75px';
+				}
+				prevScrollpos = currentScrollPos;
+			};
+		</script>
+	</head>
 
-<body style="overflow-x: hidden;">
-	<div class="se-pre-con"></div>
-	<!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container-fluid d-flex">
+	<body style="overflow-x: hidden">
+		<div class="se-pre-con"></div>
+		<!-- ======= Header ======= -->
+		<header id="header" class="fixed-top">
+			<div class="container-fluid d-flex">
+				<div class="logo mr-auto">
+					<a href="index.html">
+						<img
+							src="img/logo/logo.png"
+							alt="Logo | IIITians Network | IIIT | Community | Indian Institute of Information Technology"
+							class="img-fluid"
+						/>
+					</a>
+				</div>
 
-            <div class="logo mr-auto">
-                <a href="https://iiitiansnetwork.com/"><img src="img/logo/logo.png" alt="Logo | IIITians Network | IIIT | Community | Indian Institute of Information Technology" class="img-fluid"></a>
-            </div>
-
-            <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                    <li ><a href="https://iiitiansnetwork.com/">Home</a></li>
-                    <!--li>
-                    <li><a href="">News</a></li>
-                    <li class="drop-down"><a href="">Login</a>
-                        <ul>
-                            <li><a href="#">Student</a></li>
-                            <li><a href="#">Club</a></li>
-                            <li class="drop-down"><a href="#">Register</a>
-                                <ul>
-                                    <li><a href="">Individual</a></li>
-                                    <li><a href="">Club</a></li>
-                                    <li><a href="">Non-IIIT Students</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li-->
-                    <li class ="active"><a href="https://jeecounselling.iiitiansnetwork.com/">Jee Counselling</a></li>
-                    <li><a href="https://placement.iiitiansnetwork.com/">IIIT Placements</a></li>
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        All IIIT
-                        </a>
-                        <div class="dropdown-menu all-iiit" aria-labelledby="navbarDropdown" style="max-height: 400px; overflow-y: scroll;">
-                            <a class="dropdown-item" target="_blank"  href="https://agartala.iiitiansnetwork.com">IIIT Agartala</a>
-                            <a class="dropdown-item" target="_blank"  href="https://allahabad.iiitiansnetwork.com">IIIT Allahabad</a>
-                            <a class="dropdown-item" target="_blank"  href="https://bhagalpur.iiitiansnetwork.com">IIIT Bhagalpur</a>
-                            <a class="dropdown-item" target="_blank"  href="https://bhopal.iiitiansnetwork.com">IIIT Bhopal</a>
-                        	<a class="dropdown-item" target="_blank"  href="https://dharwad.iiitiansnetwork.com">IIIT Dharward</a> 
-                            <a class="dropdown-item" target="_blank"  href="https://guwahati.iiitiansnetwork.com">IIIT Guwahati</a> 
-                        	<a class="dropdown-item" target="_blank"  href="https://gwalior.iiitiansnetwork.com">IIITM Gwalior</a>
-                            <a class="dropdown-item" target="_blank"  href="https://jabalpur.iiitiansnetwork.com">IIITDM Jabalpur</a>
-                            <a class="dropdown-item" target="_blank"  href="https://kalyani.iiitiansnetwork.com">IIIT Kalyani</a>
-                            <a class="dropdown-item" target="_blank"  href="https://kancheepuram.iiitiansnetwork.com">IIITDM Kancheepuram</a>
-                            <a class="dropdown-item" target="_blank"  href="https://kota.iiitiansnetwork.com">IIIT Kota</a>
+				<nav class="nav-menu d-none d-lg-block">
+					<ul>
+						<li><a href="https://iiitiansnetwork.com">Home</a></li>
+						<li class="active">
 							<a
+								href="https://jeecounselling.iiitiansnetwork.com/"
+								>Jee Counselling</a
+							>
+						</li>
+						<li>
+							<a href="https://placement.iiitiansnetwork.com/"
+								>IIIT Placements</a
+							>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="navbarDropdown"
+								role="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								All IIIT
+							</a>
+							<div
+								class="dropdown-menu all-iiit"
+								aria-labelledby="navbarDropdown"
+								style="max-height: 400px; overflow-y: scroll"
+							>
+								<a
 									class="dropdown-item"
 									target="_blank"
-									href="https://Kottyam.iiitiansnetwork.com"
-									>IIIT Kottyam</a
+									href="https://agartala.iiitiansnetwork.com"
+									>IIIT Agartala</a
 								>
-							<a class="dropdown-item" target="_blank"  href="https://kurnool.iiitiansnetwork.com">IIITDM Kurnool</a>
-                            <a class="dropdown-item" target="_blank"  href="https://lucknow.iiitiansnetwork.com">IIIT Lucknow</a>
-                            <a class="dropdown-item" target="_blank"  href="https://manipur.iiitiansnetwork.com">IIIT Manipur</a>
-                            <a class="dropdown-item" target="_blank"  href="https://nagpur.iiitiansnetwork.com">IIIT Nagpur</a>
-                            <a class="dropdown-item" target="_blank"  href="https://pune.iiitiansnetwork.com">IIIT Pune</a>
-                            <a class="dropdown-item" target="_blank"  href="https://raichur.iiitiansnetwork.com">IIIT Raichur</a>
-                            <a class="dropdown-item" target="_blank"  href="https://ranchi.iiitiansnetwork.com">IIIT Ranchi</a>
-                            <a class="dropdown-item" target="_blank"  href="https://sonepat.iiitiansnetwork.com">IIIT Sonepat</a>
-                        	<a class="dropdown-item" target="_blank"  href="https://sricity.iiitiansnetwork.com">IIIT Sri City</a> 
-                            <a class="dropdown-item" target="_blank"  href="https://surat.iiitiansnetwork.com">IIIT Surat</a>
-                        	<a class="dropdown-item" target="_blank"  href="https://tiruchirapalli.iiitiansnetwork.com">IIIT Tiruchirapalli</a>
-                            <a class="dropdown-item" target="_blank"  href="https://una.iiitiansnetwork.com">IIIT Una</a>
-                            <a class="dropdown-item" target="_blank"  href="https://vadodara.iiitiansnetwork.com">IIIT Vadodara</a>
-                        </div>
-                    </li>
-                    <li><a href="https://team.iiitiansnetwork.com/">Our Team</a></li>
-                    <li><a href="https://contact.iiitiansnetwork.com/">Contact</a></li>
-                </ul>
-            </nav><!-- .nav-menu -->
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://allahabad.iiitiansnetwork.com"
+									>IIIT Allahabad</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://bhagalpur.iiitiansnetwork.com"
+									>IIIT Bhagalpur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://bhopal.iiitiansnetwork.com"
+									>IIIT Bhopal</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://dharwad.iiitiansnetwork.com"
+									>IIIT Dharward</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://guwahati.iiitiansnetwork.com"
+									>IIIT Guwahati</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://gwalior.iiitiansnetwork.com"
+									>IIITM Gwalior</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://jabalpur.iiitiansnetwork.com"
+									>IIITDM Jabalpur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kalyani.iiitiansnetwork.com"
+									>IIIT Kalyani</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kancheepuram.iiitiansnetwork.com"
+									>IIITDM Kancheepuram</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kota.iiitiansnetwork.com"
+									>IIIT Kota</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://kurnool.iiitiansnetwork.com"
+									>IIITDM Kurnool</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://lucknow.iiitiansnetwork.com"
+									>IIIT Lucknow</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://manipur.iiitiansnetwork.com"
+									>IIIT Manipur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://nagpur.iiitiansnetwork.com"
+									>IIIT Nagpur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://pune.iiitiansnetwork.com"
+									>IIIT Pune</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://raichur.iiitiansnetwork.com"
+									>IIIT Raichur</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://ranchi.iiitiansnetwork.com"
+									>IIIT Ranchi</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://sonepat.iiitiansnetwork.com"
+									>IIIT Sonepat</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://sricity.iiitiansnetwork.com"
+									>IIIT Sri City</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://surat.iiitiansnetwork.com"
+									>IIIT Surat</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://tiruchirapalli.iiitiansnetwork.com"
+									>IIIT Tiruchirapalli</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://una.iiitiansnetwork.com"
+									>IIIT Una</a
+								>
+								<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://vadodara.iiitiansnetwork.com"
+									>IIIT Vadodara</a
+								>
+							</div>
+						</li>
+						<li>
+							<a href="https://team.iiitiansnetwork.com/"
+								>Our Team</a
+							>
+						</li>
+						<li>
+							<a href="https://contact.iiitiansnetwork.com/"
+								>Contact</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<!-- .nav-menu -->
+			</div>
+		</header>
+		<!-- End Header -->
 
-        </div>
-    </header><!-- End Header -->
-
-	<main id="main" style="overflow-x: hidden;">
-		 <!-- ======= Hero Section ======= -->
-		 <section id="hero" class="d-flex align-items-center justify-content-center">
-			 <div id="particles-js"></div>
-			<div class="container particle-overlay" data-aos="fade-up">
-			
-			 <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-					<div class="col-xl-6 col-lg-6">
-					<h1 style="color:#ffc451"><span><b>JEE Counselling  2020</b></span></h1>
+		<main id="main" style="overflow-x: hidden">
+			<!-- ======= Hero Section ======= -->
+			<section
+				id="hero"
+				class="d-flex align-items-center justify-content-center"
+			>
+				<div id="particles-js"></div>
+				<div class="container particle-overlay" data-aos="fade-up">
+					<div
+						class="row justify-content-center"
+						data-aos="fade-up"
+						data-aos-delay="150"
+					>
+						<div class="col-xl-6 col-lg-6">
+							<h1 style="color: #ffc451">
+								<span><b>JEE Counselling 2020</b></span>
+							</h1>
+						</div>
+						<link
+							href="https://fonts.googleapis.com/css?family=Raleway:200,100,400"
+							rel="stylesheet"
+							type="text/css"
+						/>
 					</div>
-				    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
-			</div>		
-					<h1><br>
-					<span
-						class="txt-rotate"
-						data-period="2000"
-						
-						data-rotate='[ "Predict your ranks", "Compare your colleges", "Ask to IIITians"]'></span>
+					<h1>
+						<br />
+						<span
+							class="txt-rotate"
+							data-period="2000"
+							data-rotate='[ "Predict your ranks", "Compare your colleges", "Ask to IIITians"]'
+						></span>
 					</h1>
-					<br>
-					<br>
-			  <div class="row mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
-					<div class="icon-box">
-					  <i class="ri-paint-brush-line"></i>
-					  <h3><a href="Choicefillingtool.html">Choice Filling Tool</a></h3>
+					<br />
+					<br />
+					<div
+						class="row mt-5 justify-content-center"
+						data-aos="zoom-in"
+						data-aos-delay="250"
+					>
+						<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+							<div class="icon-box">
+								<i class="ri-paint-brush-line"></i>
+								<h3>
+									<a href="Choicefillingtool.html"
+										>Choice Filling Tool</a
+									>
+								</h3>
+							</div>
+						</div>
+						<div class="col-xl-2 col-md-4 col-6 mt-4 mt-md-0">
+							<div class="icon-box">
+								<i class="ri-calendar-todo-line"></i>
+								<h3>
+									<a href="Rankpredictor.html"
+										>Rank Predictor</a
+									>
+								</h3>
+							</div>
+						</div>
+						<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+							<div class="icon-box">
+								<i class="ri-paint-brush-line"></i>
+								<h3>
+									<a href="collegepredictor.html"
+										>College Predictor</a
+									>
+								</h3>
+							</div>
+						</div>
+						<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+							<div class="icon-box">
+								<i class="ri-database-2-line"></i>
+								<h3><a href="">College Comparator</a></h3>
+							</div>
+						</div>
+						<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+							<div class="icon-box">
+								<i class="ri-paint-brush-line"></i>
+								<h3><a href="">Question to IIITians</a></h3>
+							</div>
+						</div>
 					</div>
-				  </div>
-				  <div class="col-xl-2 col-md-4 col-6 mt-4 mt-md-0">
-				  <div class="icon-box">
-					<i class="ri-calendar-todo-line"></i>
-					<h3><a href="Rankpredictor.html" >Rank Predictor</a></h3>
-				  </div>
+					<br />
+					<br />
 				</div>
-				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
-				  <div class="icon-box">
-					<i class="ri-paint-brush-line"></i>
-					<h3><a href="collegepredictor.html" >College Predictor</a></h3>
-				  </div>
-				</div>
-				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
-				  <div class="icon-box">
-					<i class="ri-database-2-line"></i>
-					<h3><a href="https://college-comparator.netlify.app/">College Comparator</a></h3>
-				  </div>
-				</div>
-				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
-					<div class="icon-box">
-					  <i class="ri-paint-brush-line"></i>
-					  <h3><a href="https://ask-to-iiitians.herokuapp.com/">Question to IIITians</a></h3>
+			</section>
+			<!-- End Hero -->
+			<!-- ======= Why Us Section ======= -->
+			<section
+				id="why-us"
+				class="why-us section-bg"
+				style="background-color: #fff2e5"
+			>
+				<div class="container">
+					<div class="section-title" data-aos="fade-up">
+						<p>Resources</p>
+					</div>
+					<div class="row">
+						<div
+							class="col-lg-4 col-md-6 d-flex align-items-stretch"
+							data-aos="zoom-in"
+							data-aos-delay="150"
+						>
+							<div class="card">
+								<a
+									href="https://drive.google.com/drive/folders/1GXwwB1mNwSdKj_IBb7jh-eLZFyVzNyPe?usp=sharing"
+									><img
+										src="img/counselling/Curriculum.jpg"
+										class="card-img-top"
+										alt="..."
+								/></a>
+								<div class="card-icon">
+									<i class="bx bx-book-reader"></i>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">
+										<a
+											href="https://drive.google.com/drive/folders/1GXwwB1mNwSdKj_IBb7jh-eLZFyVzNyPe?usp=sharing"
+											>IIIT Curriculum</a
+										>
+									</h5>
+									<p class="card-text">
+										The list of all Subjects offered by
+										IIITs under difference semester is given
+										in a structred drive. New courses might
+										be added to these list as and when they
+										are approved.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-lg-4 col-md-6 d-flex align-items-stretch"
+							data-aos="zoom-in"
+							data-aos-delay="150"
+						>
+							<div class="card">
+								<a
+									href="https://drive.google.com/drive/folders/1inKl9lDpKDDg2PV6SuDQQwRjxfZTpfWz?usp=sharing"
+									><img
+										src="img/counselling/Notes.jpg"
+										class="card-img-top"
+										alt="..."
+								/></a>
+								<div class="card-icon">
+									<i class="bx bx-calendar-edit"></i>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">
+										<a
+											href="https://drive.google.com/drive/folders/1inKl9lDpKDDg2PV6SuDQQwRjxfZTpfWz?usp=sharing"
+											>Pre-Admission Study Resources</a
+										>
+									</h5>
+									<p class="card-text">
+										Here, we have collected all the
+										resources of Coding, and other fields,
+										the books we IIITians study here, notes,
+										and comprehensive collection other
+										courses, projects and research papers.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-lg-4 col-md-6 d-flex align-items-stretch"
+							data-aos="zoom-in"
+							data-aos-delay="150"
+						>
+							<div class="card">
+								<a
+									href="https://drive.google.com/drive/folders/1b_AIyiYsDZ8ynEY2kHt8B83xKIBA-dDH?usp=sharing"
+									><img
+										src="img/counselling/fee.jpg"
+										class="card-img-top"
+										alt="..."
+								/></a>
+								<div class="card-icon">
+									<i class="bx bx-landscape"></i>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">
+										<a
+											href="https://drive.google.com/drive/folders/1b_AIyiYsDZ8ynEY2kHt8B83xKIBA-dDH?usp=sharing"
+											>Fee Structure</a
+										>
+									</h5>
+									<p class="card-text">
+										Fees Structure of various courses
+										offered by the institutes is mentioned.
+										Please keep in mind that the fees
+										structure may be subjected to change and
+										will be updated in the website
+										accordingly.
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			  </div>
-			  <br>
-			  <br>
-			</div>
-		  </section><!-- End Hero -->
-		   <!-- ======= Why Us Section ======= -->
-		   <section id="why-us" class="why-us section-bg" style="background-color: #fff2e5;">
-			<div class="container">
-				<div class="section-title" data-aos="fade-up">
-					<p>Resources</p>
+			</section>
+			<!-- End Why Us Section -->
+			<!-- ======= Testimonials Section ======= -->
+			<section id="testimonials" class="testimonials">
+				<div class="container">
+					<div class="section-title" data-aos="fade-up">
+						<p>Featured Quora Answers from IIITians</p>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 my-4" data-aos="fade-right">
+							<div class="testimonial-item">
+								<img
+									src="assets/img/testimonials/testimonials-1.jpg"
+									class="testimonial-img"
+									alt=""
+								/>
+								<h3>
+									Should I join IIIT Sonepat this year? Can
+									you tell me about the current campus and
+									what if it got shifted later? Will it affect
+									placement?
+								</h3>
+								<h4>Samarth Mehra, IIIT Sonepat</h4>
+								<p>
+									<i
+										class="bx bxs-quote-alt-left quote-icon-left"
+									></i>
+									I don't think there can be any hesitation
+									joining the IIIT Sonepat seeing the Hostels
+									in which the students live in, the coding
+									culture and also the excellent placements
+									records that it's showing every
+									year.Currently our classes are being
+									conducted at IIT Delhi I-Tec Technopark and
+									the hostels here are just amazing beyond
+									your imagination of how good the hostels
+									could be. We've fully furnished rooms
+									consisting of that elegant woodwork
+									<a
+										href="https://www.quora.com/search?q=IIIT+Sonepat&time=week"
+										>Read full answer on quora...</a
+									>
+									<i
+										class="bx bxs-quote-alt-right quote-icon-right"
+									></i>
+								</p>
+								<h6 style="color: darkgray">
+									September 13, 2020
+								</h6>
+							</div>
+						</div>
+
+						<div class="col-lg-6 my-4" data-aos="fade-left">
+							<div class="testimonial-item">
+								<img
+									src="assets/img/testimonials/testimonials-1.jpg"
+									class="testimonial-img"
+									alt=""
+								/>
+								<h3>
+									How is the average package of IIIT Lucknow
+									18 LPA? Will the package continue to be 15+
+									after 4 years?
+								</h3>
+								<h4>Vinamra Bajaj, IIITL</h4>
+								<p>
+									<i
+										class="bx bxs-quote-alt-left quote-icon-left"
+									></i>
+									People do seem to wonder if it’s true, yeah
+									they are true which is all due to the coding
+									culture prevalent in IIITL, you need to keep
+									in consideration how this culture was built
+									upon the model of IIITA(don’t question their
+									20.6LPA average) and after modeling upon it
+									the negatives were removed and changes made
+									and this all has only lead to in less than 5
+									years such a culture developing(all credits
+									to our seniors).With time IIITL will keep
+									growing only!
+									<a
+										href="https://www.quora.com/How-is-the-average-package-of-IIIT-Lucknow-18-LPA-Will-the-package-continue-to-be-15-after-4-years"
+										>Read full answer on quora...</a
+									>
+									<i
+										class="bx bxs-quote-alt-right quote-icon-right"
+									></i>
+								</p>
+								<h6 style="color: darkgray">August 30, 2020</h6>
+							</div>
+						</div>
+
+						<div class="col-lg-6 my-4" data-aos="fade-right">
+							<div class="testimonial-item">
+								<img
+									src="assets/img/testimonials/testimonials-1.jpg"
+									class="testimonial-img"
+									alt=""
+								/>
+								<h3>
+									Which is better, LNMIIT Computer Science or
+									IIIT Pune Computer Science?
+								</h3>
+								<h4>Piyush Gupta, IIITP</h4>
+								<p>
+									<i
+										class="bx bxs-quote-alt-left quote-icon-left"
+									></i>
+									Academics: IIITs are known for their
+									excellent curriculum. LNMIIT syllabus still
+									includes subjects like classical physics &
+									modern physics etc. Instead, IIITP utilizes
+									the same time to teach students
+									industry-relevant skills which are a must
+									for IT students like Object-oriented
+									programming, Python. Other trending
+									technologies courses like cloud computing,
+									machine learning, big data & IoT are
+									compulsory at IIITP while at LNMIIT they are
+									electives.
+									<a
+										href="https://www.quora.com/Which-is-better-LNMIIT-CS-or-IIIT-Pune-CS"
+										>Read full answer on quora...</a
+									>
+									<i
+										class="bx bxs-quote-alt-right quote-icon-right"
+									></i>
+								</p>
+								<h6 style="color: darkgray">
+									September 13, 2020
+								</h6>
+							</div>
+						</div>
+
+						<div class="col-lg-6 my-4" data-aos="fade-left">
+							<div class="testimonial-item">
+								<img
+									src="assets/img/testimonials/testimonials-1.jpg"
+									class="testimonial-img"
+									alt=""
+								/>
+								<h3>
+									Can you give me a brief detail and diff. btw
+									IIITH and IIITA so that I can choose one?
+								</h3>
+								<h4>Vinamra Bajaj, IIITL</h4>
+								<p>
+									<i
+										class="bx bxs-quote-alt-left quote-icon-left"
+									></i>
+									IIIT Hyderabad is far better in every aspect
+									like academics, research, faculty,
+									administration, placements, opportunities
+									and research infrastructure. IIIT Allahabad
+									might give you better placements because of
+									the long standing repute and other than
+									being a government institute, the academics,
+									faculty, and administration is not at par
+									with IIIT Hyderabad. I would strongly
+									suggest you go for IIIT Hyderabad.
+									<a
+										href="https://www.quora.com/How-is-the-average-package-of-IIIT-Lucknow-18-LPA-Will-the-package-continue-to-be-15-after-4-years"
+										>Read full answer on quora...</a
+									>
+									<i
+										class="bx bxs-quote-alt-right quote-icon-right"
+									></i>
+								</p>
+								<h6 style="color: darkgray">August 19, 2020</h6>
+							</div>
+						</div>
+					</div>
 				</div>
-			  <div class="row">
-				<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="150">
-				  <div class="card">
-					<a href="https://drive.google.com/drive/folders/1GXwwB1mNwSdKj_IBb7jh-eLZFyVzNyPe?usp=sharing"><img src="img/counselling/Curriculum.jpg" class="card-img-top" alt="..."></a>
-					<div class="card-icon">
-					  <i class="bx bx-book-reader"></i>
+			</section>
+			<!-- End Testimonials Section -->
+
+			<!--UPDATES TESTMONIALS-->
+			<!-- ======= Testimonials Section ======= -->
+			<section
+				id="testimonials"
+				class="testimonials section-bg"
+				style="background-color: #fff2e5"
+			>
+				<div class="container">
+					<div class="section-title" data-aos="fade-up">
+						<p>Latest Updates</p>
 					</div>
-					<div class="card-body">
-					  <h5 class="card-title"><a href="https://drive.google.com/drive/folders/1GXwwB1mNwSdKj_IBb7jh-eLZFyVzNyPe?usp=sharing">IIIT Curriculum</a></h5>
-					  <p class="card-text">The list of all Subjects offered by IIITs under difference semester is given in a structred drive. New courses might be added to these list as and when they are approved.</p>
+
+					<div
+						class="owl-carousel testimonials-carousel"
+						data-aos="zoom-out"
+						data-aos-delay="150"
+					>
+						<div class="testimonial-item1">
+							<p>
+								<i
+									class="bx bxs-quote-alt-left quote-icon-left"
+								></i>
+								According to a tweet by Education Minister RP
+								Nishank, out of the total 8.58 lakh registered
+								candidates, only 6.35 lakh students actually
+								wrote their examinations.
+								<i
+									class="bx bxs-quote-alt-right quote-icon-right"
+								></i>
+							</p>
+							<img
+								src="img/counselling/why-us-1.jpg"
+								class="testimonial-img"
+								alt=""
+							/>
+							<h3>JEE Main 2020</h3>
+							<h4>
+								<a
+									href="https://www.thehindu.com/news/national/26-of-registered-students-missed-jee-main-this-year/article32569048.ece"
+									>link</a
+								>
+							</h4>
+						</div>
+
+						<div class="testimonial-item1">
+							<p>
+								<i
+									class="bx bxs-quote-alt-left quote-icon-left"
+								></i>
+								The top 2,50,000 candidates from the JEE Main
+								results who want a seat in the IITs need to
+								appear for JEE Advanced. JoSAA counselling
+								process might begin on October 6 for candidates
+								qualifying JEE Advanced.
+								<i
+									class="bx bxs-quote-alt-right quote-icon-right"
+								></i>
+							</p>
+							<img
+								src="img/counselling/why-us-2.jpg"
+								class="testimonial-img"
+								alt=""
+							/>
+							<h3>JEE Advanced</h3>
+							<h4>
+								<a
+									href="https://www.indiatoday.in/education-today/news/story/jee-main-2020-counselling-and-seat-allotment-all-you-need-to-know-1720573-2020-09-10"
+									>link</a
+								>
+							</h4>
+						</div>
+
+						<div class="testimonial-item1">
+							<p>
+								<i
+									class="bx bxs-quote-alt-left quote-icon-left"
+								></i>
+								Total number of supernumerary seats for female
+								candidates has increased from earlier 17% to 20%
+								for academic session 2020-21. A total of 12463
+								seats are available for candidates at 23 IITs.
+								<i
+									class="bx bxs-quote-alt-right quote-icon-right"
+								></i>
+							</p>
+							<img
+								src="img/counselling/why-us-3.jpg"
+								class="testimonial-img"
+								alt=""
+							/>
+							<h3>Female Seat Increment</h3>
+							<h4>
+								<a
+									href="https://www.timesnownews.com/education/article/jee-advanced-2020-seats-increased-for-female-candidates-exam-on-may-17-for-12463-seats-at-23-iits/562284"
+									>link</a
+								>
+							</h4>
+						</div>
+
+						<div class="testimonial-item1">
+							<p>
+								<i
+									class="bx bxs-quote-alt-left quote-icon-left"
+								></i>
+								MNNIT Allahabad director has been appointed
+								chairman of the Central Seat Allocation Board
+								(CCAB) by Minustry of Education. CSAB
+								headquarters will soon be set up on the
+								MNNIT-Allahabad campus
+								<i
+									class="bx bxs-quote-alt-right quote-icon-right"
+								></i>
+							</p>
+							<img
+								src="img/counselling/about-boxes-1.jpg"
+								class="testimonial-img"
+								alt=""
+							/>
+							<h3>CSAB Headquarters</h3>
+							<h4>
+								<a
+									href="https://www.hindustantimes.com/education/nits-iiits-counselling-mnnit-to-play-vital-role-in-admissions-this-year/story-sfdLPCbO93xOPfrG9aZbNJ.html"
+									>link</a
+								>
+							</h4>
+						</div>
+
+						<div class="testimonial-item1">
+							<p>
+								<i
+									class="bx bxs-quote-alt-left quote-icon-left"
+								></i>
+								The top 250,000 JEE Main 2020 rank holders are
+								eligible to register for the JEE Advanced exam
+								which is conducted for admissions to the IIT.
+								<i
+									class="bx bxs-quote-alt-right quote-icon-right"
+								></i>
+							</p>
+							<img
+								src="img/counselling/about-boxes-2.jpg"
+								class="testimonial-img"
+								alt=""
+							/>
+							<h3>JEE Advanced</h3>
+							<h4>
+								<a
+									href="https://scroll.in/announcements/972805/jee-main-2020-result-expected-to-be-released-today-at-jeemain-nta-nic-in"
+									>link</a
+								>
+							</h4>
+						</div>
 					</div>
-				  </div>
 				</div>
-				<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="150">
-				  <div class="card">
-					<a href="https://drive.google.com/drive/folders/1inKl9lDpKDDg2PV6SuDQQwRjxfZTpfWz?usp=sharing"><img src="img/counselling/Notes.jpg" class="card-img-top" alt="..."></a>
-					<div class="card-icon">
-					  <i class="bx bx-calendar-edit"></i>
+			</section>
+			<!-- End Testimonials Section -->
+
+			<!--UPDATES ENDED-->
+			<!-- ======= Frequenty Asked Questions Section ======= -->
+			<section class="faq">
+				<div class="container">
+					<div class="section-title" data-aos="fade-up">
+						<p>How our JEE Counselling Tools work</p>
 					</div>
-					<div class="card-body">
-					  <h5 class="card-title"><a href="https://drive.google.com/drive/folders/1inKl9lDpKDDg2PV6SuDQQwRjxfZTpfWz?usp=sharing">Pre-Admission Study Resources</a></h5>
-					  <p class="card-text">Here, we have collected all the resources of Coding, and other fields, the books we IIITians study here, notes, and comprehensive collection other courses, projects and research papers.</p>
-					</div>
-				  </div>
-				</div>
-				<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="150">
-				  <div class="card">
-					<a href="https://drive.google.com/drive/folders/1b_AIyiYsDZ8ynEY2kHt8B83xKIBA-dDH?usp=sharing"><img src="img/counselling/fee.jpg" class="card-img-top" alt="..."></a>
-					<div class="card-icon">
-					  <i class="bx bx-landscape"></i>
-					</div>
-					<div class="card-body">
-					  <h5 class="card-title"><a href="https://drive.google.com/drive/folders/1b_AIyiYsDZ8ynEY2kHt8B83xKIBA-dDH?usp=sharing">Fee Structure</a></h5>
-					  <p class="card-text">Fees Structure of various courses offered by the institutes is mentioned. Please keep in mind that the fees structure may be subjected to change and will be updated in the website accordingly.</p>
-					</div>
-				  </div>
-				</div>
-			  </div>
-	  
-			</div>
-		  </section><!-- End Why Us Section -->
-	   <!-- ======= Testimonials Section ======= -->
-	   <section id="testimonials" class="testimonials">
-		<div class="container">
-			<div class="section-title" data-aos="fade-up">
-				<p>Featured Quora Answers from IIITians</p>
-			</div>
-		  <div class="row">
-  
-			<div class="col-lg-6" data-aos="fade-right">
-			  <div class="testimonial-item">
-				<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-				<h3>Should I join IIIT Sonepat this year? Can you tell me about the current campus and what if it got shifted later? Will it affect placement?</h3>
-				<h4>Samarth Mehra, IIIT Sonepat</h4>
-				<p>
-					<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-					I don't think there can be any hesitation joining the IIIT Sonepat seeing the Hostels in which the students live in, the coding culture and also the excellent placements records that it's showing every year.Currently our classes are being conducted at IIT Delhi I-Tec Technopark and the hostels here are just amazing beyond your imagination of how good the hostels could be. We've fully furnished rooms consisting of that elegant woodwork 
-					<a href="https://www.quora.com/search?q=IIIT+Sonepat&time=week">Read full answer on quora...</a>
-					<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-				</p>
-				<h6 style="color:darkgray">September 13, 2020</h6>
-			  </div>
-			</div>
 
-			<div class="col-lg-6" data-aos="fade-right">
-			  <div class="testimonial-item">
-				<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-				<h3>How is the average package of IIIT Lucknow 18 LPA? Will the package continue to be 15+ after 4 years?</h3>
-				<h4>Vinamra Bajaj, IIITL</h4>
-				<p>
-					<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-					People do seem to wonder if it’s true, yeah they are true which is all due to the coding culture prevalent in IIITL, you need to keep in consideration how this culture was built upon the model of IIITA(don’t question their 20.6LPA average) and after modeling upon it the negatives were removed and changes made and this all has only lead to in less than 5 years such a culture developing(all credits to our seniors).With time IIITL will keep growing only!
-					<a href="https://www.quora.com/How-is-the-average-package-of-IIIT-Lucknow-18-LPA-Will-the-package-continue-to-be-15-after-4-years">Read full answer on quora...</a>
-					<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-				</p>
-				<h6 style="color:darkgray">August 30, 2020</h6>
-			  </div>
-			</div>
-
-			<div class="col-lg-6" data-aos="fade-right">
-			  <div class="testimonial-item">
-				<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-				<h3>Which is better, LNMIIT Computer Science or IIIT Pune Computer Science?</h3>
-				<h4>Piyush Gupta, IIITP</h4>
-				<p>
-					<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-					Academics: IIITs are known for their excellent curriculum. LNMIIT syllabus still includes subjects like classical physics & modern physics etc. Instead, IIITP utilizes the same time to teach students industry-relevant skills which are a must for IT students like Object-oriented programming, Python. Other trending technologies courses like cloud computing, machine learning, big data & IoT are compulsory at IIITP while at LNMIIT they are electives. 
-					<a href="https://www.quora.com/Which-is-better-LNMIIT-CS-or-IIIT-Pune-CS">Read full answer on quora...</a>
-					<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-				</p>
-				<h6 style="color:darkgray">September 13, 2020</h6>
-			  </div>
-			</div>
-
-			<div class="col-lg-6" data-aos="fade-right">
-			  <div class="testimonial-item">
-				<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-				<h3>Can you give me a brief detail and diff. btw IIITH and IIITA so that I can choose one?</h3>
-				<h4>Vinamra Bajaj, IIITL</h4>
-				<p>
-					<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-					IIIT Hyderabad is far better in every aspect like academics, research, faculty, administration, placements, opportunities and research infrastructure. IIIT Allahabad might give you better placements because of the long standing repute and other than being a government institute, the academics, faculty, and administration is not at par with IIIT Hyderabad. I would strongly suggest you go for IIIT Hyderabad.
-					<a href="https://www.quora.com/How-is-the-average-package-of-IIIT-Lucknow-18-LPA-Will-the-package-continue-to-be-15-after-4-years">Read full answer on quora...</a>
-					<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-				</p>
-				<h6 style="color:darkgray">August 19, 2020</h6>
-			  </div>
-			</div>
-  
-		</div>
-	  </section><!-- End Testimonials Section -->
-
-	  <!--UPDATES TESTMONIALS-->
-   <!-- ======= Testimonials Section ======= -->
-   <section id="testimonials" class="testimonials section-bg"  style="background-color: #fff2e5;">
-	<div class="container">
-
-		<div class="section-title" data-aos="fade-up">
-			<p>Latest Updates</p>
-		</div>
-
-	  <div class="owl-carousel testimonials-carousel" data-aos="zoom-out" data-aos-delay="150">
-
-		<div class="testimonial-item1">
-		  <p>
-			<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-			According to a tweet by Education Minister RP Nishank, out of the total 8.58 lakh registered candidates, only 6.35 lakh students actually wrote their examinations.
-			<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-		  </p>
-		  <img src="img/counselling/why-us-1.jpg" class="testimonial-img" alt="">
-		  <h3>JEE Main 2020</h3>
-		  <h4><a href="https://www.thehindu.com/news/national/26-of-registered-students-missed-jee-main-this-year/article32569048.ece">link</a></h4>
-		</div>
-
-		<div class="testimonial-item1">
-		  <p>
-			<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-			The top 2,50,000 candidates from the JEE Main results who want a seat in the IITs need to appear for JEE Advanced. JoSAA counselling process might begin on October 6 for candidates qualifying JEE Advanced.
-			<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-		  </p>
-		  <img src="img/counselling/why-us-2.jpg" class="testimonial-img" alt="">
-		  <h3>JEE Advanced</h3>
-		  <h4><a href="https://www.indiatoday.in/education-today/news/story/jee-main-2020-counselling-and-seat-allotment-all-you-need-to-know-1720573-2020-09-10">link</a></h4>
-		</div>
-
-		<div class="testimonial-item1">
-		  <p>
-			<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-			Total number of supernumerary seats for female candidates has increased from earlier 17% to 20% for academic session 2020-21. A total of 12463 seats are available for candidates at 23 IITs.
-			<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-		  </p>
-		  <img src="img/counselling/why-us-3.jpg" class="testimonial-img" alt="">
-		  <h3>Female Seat Increment</h3>
-		  <h4><a href="https://www.timesnownews.com/education/article/jee-advanced-2020-seats-increased-for-female-candidates-exam-on-may-17-for-12463-seats-at-23-iits/562284">link</a></h4>
-		</div>
-
-		<div class="testimonial-item1">
-		  <p>
-			<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-			MNNIT Allahabad director has been appointed chairman of the Central Seat Allocation Board (CCAB) by Minustry of Education. CSAB headquarters will soon be set up on the MNNIT-Allahabad campus
-			<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-		  </p>
-		  <img src="img/counselling/about-boxes-1.jpg" class="testimonial-img" alt="">
-		  <h3>CSAB Headquarters</h3>
-		  <h4><a href="https://www.hindustantimes.com/education/nits-iiits-counselling-mnnit-to-play-vital-role-in-admissions-this-year/story-sfdLPCbO93xOPfrG9aZbNJ.html">link</a></h4>
-		</div>
-
-		<div class="testimonial-item1">
-		  <p>
-			<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-			The top 250,000 JEE Main 2020 rank holders are eligible to register for the JEE Advanced exam which is conducted for admissions to the IIT.
-			<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-		  </p>
-		  <img src="img/counselling/about-boxes-2.jpg" class="testimonial-img" alt="">
-		  <h3>JEE Advanced</h3>
-		  <h4><a href="https://scroll.in/announcements/972805/jee-main-2020-result-expected-to-be-released-today-at-jeemain-nta-nic-in">link</a></h4>
-		</div>
-
-	  </div>
-
-	</div>
-  </section><!-- End Testimonials Section -->
-
-    
-	  <!--UPDATES ENDED-->
-		  <!-- ======= Frequenty Asked Questions Section ======= -->
-		  <section class="faq" >
-			<div class="container" >
-	  
-				<div class="section-title" data-aos="fade-up">
-					<p>How our JEE Counselling Tools work</p>
-				</div>
-	  
-			  <ul class="faq-list">
-	  
-				<li data-aos="fade-up" data-aos-delay="150">
-				  <a data-toggle="collapse" class="collapsed" href="#faq1">Choice filling tool<i class="icofont-simple-up"></i></a>
-				  <div id="faq1" class="collapse" data-parent=".faq-list" >
-					<p>
-						This tool helps you to practice the filling of choices as done in JoSAA Counselling website. Upon clicking this icon, you will be forwarded to a window requesting you to choose from your preferred institutes, category, seat-pool and preferred branch.<br>
-						And after choosing accordingly, click on the submit option. You will be provided with the a table of selected Institutes, respective branches, and opening and closing cut-off of all 7 JoSAA rounds. You can sort the rows in according to the columns of JoSAA cut-off opening and closing ranks.<br>
-						By practicing beforehand, you will be able to get a clear picture of how counselling takes place and you will be able to fill your choices without any doubts or faults!
-					</p>
-				  </div>
-				</li>
-	  
-				<li data-aos="fade-up" data-aos-delay="150">
-				  <a data-toggle="collapse" href="#faq2" class="collapsed"> Rank predictor<i class="icofont-simple-up"></i></a>
-				  <div id="faq2" class="collapse" data-parent=".faq-list">
-					<p>
-						The Rank Predictor tool helps you to predict the most probable rank based on your percentile. You have to fill your percentile and your category in the dialog box appearing and click on submit option. You will be provided with an expected JEE Main rank based on the previous year ranks data. <br>
-						<br><b>Note: This is just an anticipated rank based on previous year ranks and not an exact rank! Our Predictions Models are designed and trained by expert students with counselling experience.  We made our prediction models better than other websites and fixed many traditional loopholes that they have. 
-						</b>
-						</p>
-				  </div>
-				</li>
-	  
-				<li data-aos="fade-up" data-aos-delay="150">
-				  <a data-toggle="collapse" href="#faq3" class="collapsed">College predictor <i class="icofont-simple-up"></i></a>
-				  <div id="faq3" class="collapse" data-parent=".faq-list">
-					<p>
-						This tool helps you to predict your preferred college based on your Percentile/Rank and Category. After clicking on the rank predictor icon, submit your percentile/rank and your category in the dialogue box appearing.
-						<br>
-						On comparing your percentile and ranks with the top affecting factors like last year cut-offs of each JoSAA rounds, average placement of the institutes, highest placement of the institutes, increased no of seats every year and female quota increment you will be provided with few institutes and their respective presumed branches. 
-					</p>
-				  </div>
-				</li>
-	  
-				<li data-aos="fade-up" data-aos-delay="150">
-				  <a data-toggle="collapse" href="#faq4" class="collapsed">College comparator <i class="icofont-simple-up"></i></a>
-				  <div id="faq4" class="collapse" data-parent=".faq-list">
-					<p>
-						This tool provides you with the right comparison of IIIT’s. You have to select the two IIIT’s that you want to compare from the dialog box provided. And you will be getting the information about each IIIT based on their academic curriculum, performance, placements, college life, etc. Whereby, you can choose your appropriate college and branch while filling your choices.
-					</p>
-				  </div>
-				</li>
-	  
-				<li data-aos="fade-up" data-aos-delay="150">
-				  <a data-toggle="collapse" href="#faq5" class="collapsed">Questions to IIITians<i class="icofont-simple-up" ></i></a>
-				  <div id="faq5" class="collapse" data-parent=".faq-list">
-					<p>
-						You can post your queries to us by clicking on this icon. You have to fill few details of yours as, your full-name, email-ID, and your query. You have to select weather your question is related to any particular IIIT or a general question. The question will be forwarded to our team from that particular institute and you will get reply from them with email. The questions as well as their answers will be reflected in the website as well.
-					</p>
-				  </div>
-				</li>
-	  
-			  </ul>
-	  
-			</div>
-		  </section><!-- End Frequenty Asked Questions Section -->
-	   
-
-	   <!-- ======= Join us Section ======= -->
-	   <section id="faq" class="faqi section-bg"  style="background-color: #fff2e5;">
-		<div class="container">
-
-			<div class="section-title" data-aos="fade-up">
-				<p>IIIT's at a glance</p>
-			</div>
-
-		   <div class="row">
-
-				<div class="col-lg-6">                       
 					<ul class="faq-list">
-						<li data-aos="fade-right" data-aos-delay="100">
-							<a data-toggle="collapse" class="" href="#faq1">IIITs Funding<i class="icofont-simple-up"></i></a>
-							<div id="faq1" class="collapse show" data-parent=".faq-list">
+						<li data-aos="fade-up" data-aos-delay="150">
+							<a
+								data-toggle="collapse"
+								class="collapsed"
+								href="#faq1"
+								>Choice filling tool<i
+									class="icofont-simple-up"
+								></i
+							></a>
+							<div
+								id="faq1"
+								class="collapse"
+								data-parent=".faq-list"
+							>
 								<p>
-									IIITs at Gwalior, Allahabad, Jabalpur, Kurnool and Kancheepuram are fully government funded IIITs. Rest of the IIITs are based on the public-private partnership (PPP) model, funded by the central government, state governments and industry partners in the ratio 50:35:15.
+									This tool helps you to practice the filling
+									of choices as done in JoSAA Counselling
+									website. Upon clicking this icon, you will
+									be forwarded to a window requesting you to
+									choose from your preferred institutes,
+									category, seat-pool and preferred branch.<br />
+									And after choosing accordingly, click on the
+									submit option. You will be provided with the
+									a table of selected Institutes, respective
+									branches, and opening and closing cut-off of
+									all 7 JoSAA rounds. You can sort the rows in
+									according to the columns of JoSAA cut-off
+									opening and closing ranks.<br />
+									By practicing beforehand, you will be able
+									to get a clear picture of how counselling
+									takes place and you will be able to fill
+									your choices without any doubts or faults!
 								</p>
 							</div>
 						</li>
-						<li data-aos="fade-right" data-aos-delay="200">
-							<a data-toggle="collapse" href="#faq2" class="collapsed">What is PPP model?<i class="icofont-simple-up"></i></a>
-							<div id="faq2" class="collapse" data-parent=".faq-list">
+
+						<li data-aos="fade-up" data-aos-delay="150">
+							<a
+								data-toggle="collapse"
+								href="#faq2"
+								class="collapsed"
+							>
+								Rank predictor<i class="icofont-simple-up"></i
+							></a>
+							<div
+								id="faq2"
+								class="collapse"
+								data-parent=".faq-list"
+							>
 								<p>
-									A public private partnership involves both government and private organizations working together to complete a project. New IIITs are funded by the central government, state governments and private organizations.
+									The Rank Predictor tool helps you to predict
+									the most probable rank based on your
+									percentile. You have to fill your percentile
+									and your category in the dialog box
+									appearing and click on submit option. You
+									will be provided with an expected JEE Main
+									rank based on the previous year ranks data.
+									<br />
+									<br /><b
+										>Note: This is just an anticipated rank
+										based on previous year ranks and not an
+										exact rank! Our Predictions Models are
+										designed and trained by expert students
+										with counselling experience. We made our
+										prediction models better than other
+										websites and fixed many traditional
+										loopholes that they have.
+									</b>
 								</p>
 							</div>
 						</li>
-						<li data-aos="fade-right" data-aos-delay="300">
-							<a data-toggle="collapse" href="#faq3" class="collapsed">IIITs Vs Other Colleges.<i class="icofont-simple-up"></i></a>
-							<div id="faq3" class="collapse" data-parent=".faq-list">
+
+						<li data-aos="fade-up" data-aos-delay="150">
+							<a
+								data-toggle="collapse"
+								href="#faq3"
+								class="collapsed"
+								>College predictor
+								<i class="icofont-simple-up"></i
+							></a>
+							<div
+								id="faq3"
+								class="collapse"
+								data-parent=".faq-list"
+							>
 								<p>
-									IIIITs, unlike other major government funded colleges, are a group of institutes that are focused mainly on information technology. They have a curriculum strictly aligned as per the needs of the IT industry.
+									This tool helps you to predict your
+									preferred college based on your
+									Percentile/Rank and Category. After clicking
+									on the rank predictor icon, submit your
+									percentile/rank and your category in the
+									dialogue box appearing.
+									<br />
+									On comparing your percentile and ranks with
+									the top affecting factors like last year
+									cut-offs of each JoSAA rounds, average
+									placement of the institutes, highest
+									placement of the institutes, increased no of
+									seats every year and female quota increment
+									you will be provided with few institutes and
+									their respective presumed branches.
 								</p>
 							</div>
 						</li>
-						<li data-aos="fade-right" data-aos-delay="300">
-							<a data-toggle="collapse" href="#faq4" class="collapsed">Courses<i class="icofont-simple-up"></i></a>
-							<div id="faq4" class="collapse" data-parent=".faq-list">
+
+						<li data-aos="fade-up" data-aos-delay="150">
+							<a
+								data-toggle="collapse"
+								href="#faq4"
+								class="collapsed"
+								>College comparator
+								<i class="icofont-simple-up"></i
+							></a>
+							<div
+								id="faq4"
+								class="collapse"
+								data-parent=".faq-list"
+							>
 								<p>
-									Most of the IIITs offer undergraduate courses in Computer Science & Engineering, Electronics & Communication Engineering and Information Technology. However some IIITs also offer undergraduate courses in design (IIIT-Jabalpur), mechanical engineering (IIIT-Kancheepuram), etc.
-								</p>
-							</div>
-						</li>                 
-					</ul>                
-				</div>
-				
-				<div class="col-lg-6">
-					<ul class="faq-list">
-						<li data-aos="fade-left" data-aos-delay="100">
-							<a data-toggle="collapse" class="" href="#faq_5">No Management Quota<i class="icofont-simple-up"></i></a>
-							<div id="faq_5" class="collapse show" data-parent=".faq-list">
-								<p>
-									No, for undergraduate admission in any IIIT, one must give the JEE-Main exam and take part in the JOSAA counselling.
+									This tool provides you with the right
+									comparison of IIIT’s. You have to select the
+									two IIIT’s that you want to compare from the
+									dialog box provided. And you will be getting
+									the information about each IIIT based on
+									their academic curriculum, performance,
+									placements, college life, etc. Whereby, you
+									can choose your appropriate college and
+									branch while filling your choices.
 								</p>
 							</div>
 						</li>
-						<li data-aos="fade-left" data-aos-delay="200">
-							<a data-toggle="collapse" href="#faq_6" class="collapsed">Curriculum<i class="icofont-simple-up"></i></a>
-							<div id="faq_6" class="collapse" data-parent=".faq-list">
+
+						<li data-aos="fade-up" data-aos-delay="150">
+							<a
+								data-toggle="collapse"
+								href="#faq5"
+								class="collapsed"
+								>Questions to IIITians<i
+									class="icofont-simple-up"
+								></i
+							></a>
+							<div
+								id="faq5"
+								class="collapse"
+								data-parent=".faq-list"
+							>
 								<p>
-									The curriculum is strictly aligned to the needs of the IT industry. It is geared at keeping abreast with the latest developments in research and IT industry.
+									You can post your queries to us by clicking
+									on this icon. You have to fill few details
+									of yours as, your full-name, email-ID, and
+									your query. You have to select weather your
+									question is related to any particular IIIT
+									or a general question. The question will be
+									forwarded to our team from that particular
+									institute and you will get reply from them
+									with email. The questions as well as their
+									answers will be reflected in the website as
+									well.
 								</p>
 							</div>
 						</li>
 						<li data-aos="fade-left" data-aos-delay="300">
-							<a data-toggle="collapse" href="#faq_7" class="collapsed">Campus<i class="icofont-simple-up"></i></a>
-							<div id="faq_7" class="collapse" data-parent=".faq-list">
+							<a
+								data-toggle="collapse"
+								href="#faq_7"
+								class="collapsed"
+								>Campus<i class="icofont-simple-up"></i
+							></a>
+							<div
+								id="faq_7"
+								class="collapse"
+								data-parent=".faq-list"
+							>
 								<p>
-									Few IIITs have their own campus. Others are running in a temporary campus situated in some other colleges (like various IITs / NITs), until the construction of their campus is complete.
+									Few IIITs have their own campus. Others are
+									running in a temporary campus situated in
+									some other colleges (like various IITs /
+									NITs), until the construction of their
+									campus is complete.
 								</p>
 							</div>
-						</li>	
-					<!--
+						</li>
+						<!--
 						<div data-aos="fade-left" data-aos-delay="300" onclick="hideDiv()"  class="btn">Made with ❤ by Counselling Team
 							<div class="btn2"></div>
 						</div>
-					-->	 	      
+					-->
 					</ul>
 				</div>
-		</div> <!-- Div class row closed -->
-		</div>
-		
-	
-	<!-- ======= Join us ended ========== -->
-	  
-	<!-- ======= Team Counselling ========== -->
-		   
-	
-	<div  id="webteam" class="container team-section text-center my-5  "  style="margin-left:auto; margin-right:auto;" >
-		<div class="section-title" data-aos="fade-up">
-			<p>Counselling Team</p>
-		</div>
-	<br>
-	<div class="row" >
-	<div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
-          <div class="avatar mx-auto">
-            <img src="img/team/prashant.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
-          </div>
-          <h5 class="font-weight-bold mt-4 mb-1">Prashant Katiyar</h5>
-            <p class="text-uppercase blue-text mb-0">Lead Developer</p>
-            <ul class="list-unstyled mt-0">
-                <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/prashant-milan-katiyar">
-                <i class="fa fa-linkedin black-text"> </i>
-                </a>
-                </a>
-            </ul>
-        </div>
-		<div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
-			<div class="avatar mx-auto">
-			  <img src="img/team/Aditya Agrawal.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
-			</div>
-			<h5 class="font-weight-bold mt-4 mb-1">Aditya Agrawal</h5>
-			  <p class="text-uppercase blue-text mb-0">Backend Dev./API</p>
-			  <ul class="list-unstyled mt-0">
-				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/crossphoton/">
-				  <i class="fa fa-linkedin black-text"> </i>
-				  </a>
-				  </a>
-			  </ul>
-		  </div>
-		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
-			<div class="avatar mx-auto">
-			  <img src="img/team/Aman.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
-			</div>
-			<h5 class="font-weight-bold mt-4 mb-1">Aman Malhotra</h5>
-			  <p class="text-uppercase blue-text mb-0">ML Models</p>
-			  <ul class="list-unstyled mt-0">
-				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/aman-003-malhotra/">
-				  <i class="fa fa-linkedin black-text"> </i>
-				  </a>
-				  </a>
-			  </ul>
-		  </div>
-		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
-			<div class="avatar mx-auto">
-			  <img src="img/team/Arunit Kumar.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
-			</div>
-			<h5 class="font-weight-bold mt-4 mb-1">Arunit Kumar</h5>
-			  <p class="text-uppercase blue-text mb-0">Backend Dev.</p>
-			  <ul class="list-unstyled mt-0">
-				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/arunit-kumar/">
-				  <i class="fa fa-linkedin black-text"> </i>
-				  </a>
-				  </a>
-			  </ul>
-		  </div>
-	
-	
-	<div class="row">
-		<div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
-			<div class="avatar mx-auto">
-			  <img src="img/team/Ishan Mishra .jpeg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
-			</div>
-			<h5 class="font-weight-bold mt-4 mb-1">Ishan Mishra</h5>
-			  <p class="text-uppercase blue-text mb-0">Backend Dev.</p>
-			  <ul class="list-unstyled mt-0">
-				  <a class="p-2 fa-lg tw-ic" href="http://www.linkedin.com/in/ishan-mishara-00788b192/">
-				  <i class="fa fa-linkedin black-text"> </i>
-				  </a>
-				  </a>
-			  </ul>
-		  </div>
-		
-		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
-			<div class="avatar mx-auto">
-			  <img src="img/team/Koneru Rehasree.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
-			</div>
-			<h5 class="font-weight-bold mt-4 mb-1"><a href="https://rehasree.github.io/portfolio.io/" style="color: #121212;">Reha</a></h5>
-			  <p class="text-uppercase blue-text mb-0">Frontend Dev.</p>
-			  <ul class="list-unstyled mt-0">
-				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/koneru-rehasree-6a9b1b192/">
-				  <i class="fa fa-linkedin black-text"> </i>
-				  </a>
-				  </a>
-			  </ul>
-		  </div>
-		  
-		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
-			<div class="avatar mx-auto">
-			  <img src="img/team/rdt.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
-			</div>
-			<h5 class="font-weight-bold mt-4 mb-1">Rishabh Tiwari</h5>
-			  <p class="text-uppercase blue-text mb-0">Frontend Dev.</p>
-			  <ul class="list-unstyled mt-0">
-				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/rdt/">
-				  <i class="fa fa-linkedin black-text"> </i>
-				  </a>
-				  </a>
-			  </ul>
-		  </div>
-	</div>
-	</section>  
-	</main>
-	<!-- End #main -->
 
-	<!-- ======= Footer ======= -->
+				<!-- ======= Join us ended ========== -->
 
-	<!-- No need to change anything in footer area -->
-	<footer id="footer">
-		
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
-						<h3>IIITians Network</h3>
-						<p>
-							A never ending connection...<br /><br />
-							<strong>Email:</strong>
-							iiitiansnetwork@gmail.com<br />
-							<strong>Hit Counter</strong><br /><a href="https://www.freecounterstat.com"
-								title="free hit counters"><img
-									src="https://counter3.stat.ovh/private/freecounterstat.php?c=am3swfnxwq8cga496ku7nw7ebfcg8rfq"
-									border="0" title="free hit counters" alt="free hit counters" /></a><br />
-						</p>
+				<!-- ======= Team Counselling ========== -->
+
+				<div
+					id="webteam"
+					class="container team-section text-center my-5"
+					style="margin-left: auto; margin-right: auto"
+				>
+					<div class="section-title" data-aos="fade-up">
+						<p>Counselling Team</p>
 					</div>
-
-					<div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="200">
-						<h4>Useful Links</h4>
-						<ul>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="https://iiitiansnetwork.com/">Home</a>
-							</li>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="https://iiitiansnetwork.com/">News</a>
-							</li>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="https://alliiit.iiitiansnetwork.com/">All IIIT</a>
-							</li>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="https://contact.iiitiansnetwork.com">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
-						<h4>Our Community</h4>
-						<ul>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="http://team.iiitiansnetwork.com/">Core Team</a>
-							</li>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="http://team.iiitiansnetwork.com/#web">Web Team</a>
-							</li>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="http://team.iiitiansnetwork.com/#design">Design Team</a>
-							</li>
-							<li>
-								<i class="bx bx-chevron-right"></i>
-								<a href="http://team.iiitiansnetwork.com/#content">Content Team</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="400">
-						<h4>Our Social Networks</h4>
-						<p>Follow us to stay connected with IIITs</p>
-						<div class="social-links mt-3">
-							<a href="https://t.me/joinchat/PbhPfBW9YSqXvAS20Y09ng" class="telegram" target="_blank"><i
-									class="bx bxl-telegram"></i></a>
-							<a href="https://www.facebook.com/iiitians.network/?fref=tag" class="facebook"
-								target="_blank"><i class="bx bxl-facebook"></i></a>
-							<a href="https://www.instagram.com/iiitians.network/" class="instagram" target="_blank"><i
-									class="bx bxl-instagram"></i></a>
-							<a href="https://www.linkedin.com/company/53184003" class="linkedin" target="_blank"><i
-									class="bx bxl-linkedin"></i></a>
-							<a href="https://www.youtube.com/channel/UCFlPhj8XnKBWc1cNSC8IedA" class="linkedin"
-								target="_blank"><i class="bx bxl-youtube"></i></a>
+					<br />
+					<div class="row">
+						<div
+							class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
+							data-aos="zoom-in"
+							style="margin-right: auto; margin-left: auto"
+						>
+							<div class="avatar mx-auto">
+								<img
+									src="img/team/prashant.jpg"
+									class="rounded-circle z-depth-2 responsive team-image"
+									alt="Sample avatar"
+									style="height: 100%; width: 100%"
+								/>
+							</div>
+							<h5 class="font-weight-bold mt-4 mb-1">
+								Prashant Katiyar
+							</h5>
+							<p class="text-uppercase blue-text mb-0">
+								Lead Developer
+							</p>
+							<ul class="list-unstyled mt-0">
+								<a
+									class="p-2 fa-lg tw-ic"
+									href="https://www.linkedin.com/in/prashant-milan-katiyar"
+								>
+									<i class="fa fa-linkedin black-text"> </i>
+								</a>
+							</ul>
 						</div>
-						<p>
-							<br />Edit this section on
-							<b><a href="https://github.com/IIITians-Network/Counselling">GitHub</a></b><br />
-						</p>
+						<div
+							class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
+							data-aos="zoom-in"
+							style="margin-right: auto; margin-left: auto"
+						>
+							<div class="avatar mx-auto">
+								<img
+									src="img/team/Aditya Agrawal.jpg"
+									class="rounded-circle z-depth-2 responsive team-image"
+									alt="Sample avatar"
+									style="height: 100%; width: 100%"
+								/>
+							</div>
+							<h5 class="font-weight-bold mt-4 mb-1">
+								Aditya Agrawal
+							</h5>
+							<p class="text-uppercase blue-text mb-0">
+								Backend Dev./API
+							</p>
+							<ul class="list-unstyled mt-0">
+								<a
+									class="p-2 fa-lg tw-ic"
+									href="https://www.linkedin.com/in/crossphoton/"
+								>
+									<i class="fa fa-linkedin black-text"> </i>
+								</a>
+							</ul>
+						</div>
+						<div
+							class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
+							data-aos="zoom-in"
+							style="margin-right: auto; margin-left: auto"
+						>
+							<div class="avatar mx-auto">
+								<img
+									src="img/team/Aman.jpg"
+									class="rounded-circle z-depth-2 responsive team-image"
+									alt="Sample avatar"
+									style="height: 100%; width: 100%"
+								/>
+							</div>
+							<h5 class="font-weight-bold mt-4 mb-1">
+								Aman Malhotra
+							</h5>
+							<p class="text-uppercase blue-text mb-0">
+								ML Models
+							</p>
+							<ul class="list-unstyled mt-0">
+								<a
+									class="p-2 fa-lg tw-ic"
+									href="https://www.linkedin.com/in/aman-003-malhotra/"
+								>
+									<i class="fa fa-linkedin black-text"> </i>
+								</a>
+							</ul>
+						</div>
+						<div
+							class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
+							data-aos="zoom-in"
+							style="margin-right: auto; margin-left: auto"
+						>
+							<div class="avatar mx-auto">
+								<img
+									src="img/team/Arunit Kumar.jpg"
+									class="rounded-circle z-depth-2 responsive team-image"
+									alt="Sample avatar"
+									style="height: 100%; width: 100%"
+								/>
+							</div>
+							<h5 class="font-weight-bold mt-4 mb-1">
+								Arunit Kumar
+							</h5>
+							<p class="text-uppercase blue-text mb-0">
+								Backend Dev.
+							</p>
+							<ul class="list-unstyled mt-0">
+								<a
+									class="p-2 fa-lg tw-ic"
+									href="https://www.linkedin.com/in/arunit-kumar/"
+								>
+									<i class="fa fa-linkedin black-text"> </i>
+								</a>
+							</ul>
+						</div>
+
+						<div class="row">
+							<div
+								class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
+								data-aos="zoom-in"
+								style="margin-right: auto; margin-left: auto"
+							>
+								<div class="avatar mx-auto">
+									<img
+										src="img/team/Ishan Mishra .jpeg"
+										class="rounded-circle z-depth-2 responsive team-image"
+										alt="Sample avatar"
+										style="height: 100%; width: 100%"
+									/>
+								</div>
+								<h5 class="font-weight-bold mt-4 mb-1">
+									Ishan Mishra
+								</h5>
+								<p class="text-uppercase blue-text mb-0">
+									Backend Dev.
+								</p>
+								<ul class="list-unstyled mt-0">
+									<a
+										class="p-2 fa-lg tw-ic"
+										href="http://www.linkedin.com/in/ishan-mishara-00788b192/"
+									>
+										<i class="fa fa-linkedin black-text">
+										</i>
+									</a>
+								</ul>
+							</div>
+
+							<div
+								class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
+								data-aos="zoom-in"
+								style="margin-right: auto; margin-left: auto"
+							>
+								<div class="avatar mx-auto">
+									<img
+										src="img/team/Koneru Rehasree.jpg"
+										class="rounded-circle z-depth-2 responsive team-image"
+										alt="Sample avatar"
+										style="height: 100%; width: 100%"
+									/>
+								</div>
+								<h5 class="font-weight-bold mt-4 mb-1">
+									<a
+										href="https://rehasree.github.io/portfolio.io/"
+										style="color: #121212"
+										>Reha</a
+									>
+								</h5>
+								<p class="text-uppercase blue-text mb-0">
+									Frontend Dev.
+								</p>
+								<ul class="list-unstyled mt-0">
+									<a
+										class="p-2 fa-lg tw-ic"
+										href="https://www.linkedin.com/in/koneru-rehasree-6a9b1b192/"
+									>
+										<i class="fa fa-linkedin black-text">
+										</i>
+									</a>
+								</ul>
+							</div>
+
+							<div
+								class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
+								data-aos="zoom-in"
+								style="margin-right: auto; margin-left: auto"
+							>
+								<div class="avatar mx-auto">
+									<img
+										src="img/team/rdt.jpg"
+										class="rounded-circle z-depth-2 responsive team-image"
+										alt="Sample avatar"
+										style="height: 100%; width: 100%"
+									/>
+								</div>
+								<h5 class="font-weight-bold mt-4 mb-1">
+									Rishabh Tiwari
+								</h5>
+								<p class="text-uppercase blue-text mb-0">
+									Frontend Dev.
+								</p>
+								<ul class="list-unstyled mt-0">
+									<a
+										class="p-2 fa-lg tw-ic"
+										href="https://www.linkedin.com/in/rdt/"
+									>
+										<i class="fa fa-linkedin black-text">
+										</i>
+									</a>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Div class row closed -->
+				</div>
+			</section>
+		</main>
+		<!-- End #main -->
+
+		<!-- ======= Footer ======= -->
+
+		<!-- No need to change anything in footer area -->
+		<footer id="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div
+							class="col-lg-3 col-md-6 footer-contact"
+							data-aos="fade-up"
+							data-aos-delay="100"
+						>
+							<h3>IIITians Network</h3>
+							<p>
+								A never ending connection...<br /><br />
+								<strong>Email:</strong>
+								iiitiansnetwork@gmail.com<br />
+								<strong>Hit Counter</strong><br /><a
+									href="https://www.freecounterstat.com"
+									title="free hit counters"
+									><img
+										src="https://counter3.stat.ovh/private/freecounterstat.php?c=am3swfnxwq8cga496ku7nw7ebfcg8rfq"
+										border="0"
+										title="free hit counters"
+										alt="free hit counters" /></a
+								><br />
+							</p>
+						</div>
+
+						<div
+							class="col-lg-3 col-md-6 footer-links"
+							data-aos="fade-up"
+							data-aos-delay="200"
+						>
+							<h4>Useful Links</h4>
+							<ul>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="https://iiitiansnetwork.com/"
+										>Home</a
+									>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="https://iiitiansnetwork.com/"
+										>News</a
+									>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a
+										href="https://alliiit.iiitiansnetwork.com/"
+										>All IIIT</a
+									>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a
+										href="https://contact.iiitiansnetwork.com"
+										>Contact Us</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div
+							class="col-lg-3 col-md-6 footer-links"
+							data-aos="fade-up"
+							data-aos-delay="300"
+						>
+							<h4>Our Community</h4>
+							<ul>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="http://team.iiitiansnetwork.com/"
+										>Core Team</a
+									>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a
+										href="http://team.iiitiansnetwork.com/#web"
+										>Web Team</a
+									>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a
+										href="http://team.iiitiansnetwork.com/#design"
+										>Design Team</a
+									>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a
+										href="http://team.iiitiansnetwork.com/#design"
+										>Animation Team</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div
+							class="col-lg-3 col-md-6 footer-links"
+							data-aos="fade-up"
+							data-aos-delay="400"
+						>
+							<h4>Our Social Networks</h4>
+							<p>Follow us to stay connected with IIITs</p>
+							<div class="social-links mt-3">
+								<a
+									href="https://t.me/joinchat/PbhPfBW9YSqXvAS20Y09ng"
+									class="telegram"
+									target="_blank"
+									><i class="bx bxl-telegram"></i
+								></a>
+								<a
+									href="https://www.facebook.com/iiitians.network/?fref=tag"
+									class="facebook"
+									target="_blank"
+									><i class="bx bxl-facebook"></i
+								></a>
+								<a
+									href="https://www.instagram.com/iiitians.network/"
+									class="instagram"
+									target="_blank"
+									><i class="bx bxl-instagram"></i
+								></a>
+								<a
+									href="https://www.linkedin.com/company/53184003"
+									class="linkedin"
+									target="_blank"
+									><i class="bx bxl-linkedin"></i
+								></a>
+								<a
+									href="https://www.youtube.com/channel/UCFlPhj8XnKBWc1cNSC8IedA"
+									class="linkedin"
+									target="_blank"
+									><i class="bx bxl-youtube"></i
+								></a>
+							</div>
+							<p>
+								<br />Edit this section on
+								<b
+									><a
+										href="https://github.com/IIITians-Network/Counselling"
+										>GitHub</a
+									></b
+								><br />
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="container py-4">
-			<div class="copyright">
-				&copy; Copyright
-				<strong><span>IIITians Network</span></strong>. All Rights Reserved
+			<div class="container py-4">
+				<div class="copyright">
+					&copy; Copyright
+					<strong><span>IIITians Network</span></strong
+					>. All Rights Reserved
+				</div>
+				<div class="credits" style="color: #fef8f5">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+					Powered by
+					<a href="https://bootstrapmade.com/" style="color: #fef8f5"
+						>BootstrapMade</a
+					>
+				</div>
 			</div>
-			<div class="credits"  style="color:#fef8f5">
-				<!-- All the links in the footer should remain intact. -->
-				<!-- You can delete the links only if you purchased the pro version. -->
-				<!-- Licensing information: https://bootstrapmade.com/license/ -->
-				<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
-				Powered by
-				<a href="https://bootstrapmade.com/" style="color:#fef8f5">BootstrapMade</a>
-			</div>
-		</div>
-	</footer>
-	<!-- End Footer -->
+		</footer>
+		<!-- End Footer -->
 
-	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+		<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-	<!-- Vendor JS Files -->
-	<!-- <script src="assets/vendor/jquery/jquery.min.js"></script> -->
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-	<script src="assets/vendor/php-email-form/validate.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/venobox/venobox.min.js"></script>
-	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-	<script src="assets/vendor/aos/aos.js"></script>
-	<script src="assets/js/jquery.counterup.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Vendor JS Files -->
+		<!-- <script src="assets/vendor/jquery/jquery.min.js"></script> -->
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="assets/vendor/php-email-form/validate.js"></script>
+		<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+		<script src="assets/vendor/venobox/venobox.min.js"></script>
+		<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="assets/vendor/aos/aos.js"></script>
+		<script src="assets/js/jquery.counterup.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".counter").counterUp({
-				delay: 10,
-				time: 1000,
+		<script>
+			jQuery(document).ready(function ($) {
+				$('.counter').counterUp({
+					delay: 10,
+					time: 1000,
+				});
 			});
-		});
-	</script>
+		</script>
 
-	<!-- Template Main JS File -->
-	<script src="assets/js/main.js"></script>
+		<!-- Template Main JS File -->
+		<script src="assets/js/main.js"></script>
 
-	<!-- Custom JS files -->
-	<script src="assets/js/custom.js"></script>
-	<!-- particle Js -->
-	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-	<script>
-		particlesJS.load('particles-js', 'assets/particles.json', function() {
-			 console.log('callback - particles.js config loaded');
-		});
-	 </script>
-</body>
-
+		<!-- Custom JS files -->
+		<script src="assets/js/custom.js"></script>
+		<!-- particle Js -->
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<script>
+			particlesJS.load(
+				'particles-js',
+				'assets/particles.json',
+				function () {
+					console.log('callback - particles.js config loaded');
+				}
+			);
+		</script>
+	</body>
 </html>
