@@ -143,41 +143,155 @@
 				.se-pre-con {
 					background-size: contain;
 				}
-			}
-			/* black font in all iiit dropdown */
-			.all-iiit a {
-				color: #121212;
-			}
-		</style>
-		<!-- =================== Loader part ended=================== -->
-		<!-- auto hide navigation on scroll -->
-		<script type="text/javascript">
-			var prevScrollpos = window.pageYOffset;
-			window.onscroll = function () {
-				var currentScrollPos = window.pageYOffset;
-				if (prevScrollpos > currentScrollPos) {
-					document.getElementById('header').style.top = '0';
-				} else {
-					document.getElementById('header').style.top = '-75px';
-				}
-				prevScrollpos = currentScrollPos;
-			};
-		</script>
-	</head>
+			}	
+		/* black font in all iiit dropdown */
+        .all-iiit a {
+            color: #121212;
+        }	
+	</style>
+	<!-- =================== Loader part ended=================== -->
+	 <!-- auto hide navigation on scroll -->
+    <script type="text/javascript"> 
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("header").style.top = "0";
+        } else {
+            document.getElementById("header").style.top = "-75px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+    </script>
+</head>
 
-	<body style="overflow-x: hidden">
-		<div class="se-pre-con"></div>
-		<!-- ======= Header ======= -->
-		<header id="header" class="fixed-top">
-			<div class="container-fluid d-flex">
-				<div class="logo mr-auto">
-					<a href="index.html">
-						<img
-							src="img/logo/logo.png"
-							alt="Logo | IIITians Network | IIIT | Community | Indian Institute of Information Technology"
-							class="img-fluid"
-						/>
-					</a>
+<body style="overflow-x: hidden;">
+	<div class="se-pre-con"></div>
+	<!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container-fluid d-flex">
+
+            <div class="logo mr-auto">
+                <a href="https://iiitiansnetwork.com/"><img src="img/logo/logo.png" alt="Logo | IIITians Network | IIIT | Community | Indian Institute of Information Technology" class="img-fluid"></a>
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li ><a href="https://iiitiansnetwork.com/">Home</a></li>
+                    <!--li>
+                    <li><a href="">News</a></li>
+                    <li class="drop-down"><a href="">Login</a>
+                        <ul>
+                            <li><a href="#">Student</a></li>
+                            <li><a href="#">Club</a></li>
+                            <li class="drop-down"><a href="#">Register</a>
+                                <ul>
+                                    <li><a href="">Individual</a></li>
+                                    <li><a href="">Club</a></li>
+                                    <li><a href="">Non-IIIT Students</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li-->
+                    <li class ="active"><a href="https://jeecounselling.iiitiansnetwork.com/">Jee Counselling</a></li>
+                    <li><a href="https://placement.iiitiansnetwork.com/">IIIT Placements</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        All IIIT
+                        </a>
+                        <div class="dropdown-menu all-iiit" aria-labelledby="navbarDropdown" style="max-height: 400px; overflow-y: scroll;">
+                            <a class="dropdown-item" target="_blank"  href="https://agartala.iiitiansnetwork.com">IIIT Agartala</a>
+                            <a class="dropdown-item" target="_blank"  href="https://allahabad.iiitiansnetwork.com">IIIT Allahabad</a>
+                            <a class="dropdown-item" target="_blank"  href="https://bhagalpur.iiitiansnetwork.com">IIIT Bhagalpur</a>
+                            <a class="dropdown-item" target="_blank"  href="https://bhopal.iiitiansnetwork.com">IIIT Bhopal</a>
+                        	<a class="dropdown-item" target="_blank"  href="https://dharwad.iiitiansnetwork.com">IIIT Dharward</a> 
+                            <a class="dropdown-item" target="_blank"  href="https://guwahati.iiitiansnetwork.com">IIIT Guwahati</a> 
+                        	<a class="dropdown-item" target="_blank"  href="https://gwalior.iiitiansnetwork.com">IIITM Gwalior</a>
+                            <a class="dropdown-item" target="_blank"  href="https://jabalpur.iiitiansnetwork.com">IIITDM Jabalpur</a>
+                            <a class="dropdown-item" target="_blank"  href="https://kalyani.iiitiansnetwork.com">IIIT Kalyani</a>
+                            <a class="dropdown-item" target="_blank"  href="https://kancheepuram.iiitiansnetwork.com">IIITDM Kancheepuram</a>
+                            <a class="dropdown-item" target="_blank"  href="https://kota.iiitiansnetwork.com">IIIT Kota</a>
+							<a
+									class="dropdown-item"
+									target="_blank"
+									href="https://Kottyam.iiitiansnetwork.com"
+									>IIIT Kottyam</a
+								>
+							<a class="dropdown-item" target="_blank"  href="https://kurnool.iiitiansnetwork.com">IIITDM Kurnool</a>
+                            <a class="dropdown-item" target="_blank"  href="https://lucknow.iiitiansnetwork.com">IIIT Lucknow</a>
+                            <a class="dropdown-item" target="_blank"  href="https://manipur.iiitiansnetwork.com">IIIT Manipur</a>
+                            <a class="dropdown-item" target="_blank"  href="https://nagpur.iiitiansnetwork.com">IIIT Nagpur</a>
+                            <a class="dropdown-item" target="_blank"  href="https://pune.iiitiansnetwork.com">IIIT Pune</a>
+                            <a class="dropdown-item" target="_blank"  href="https://raichur.iiitiansnetwork.com">IIIT Raichur</a>
+                            <a class="dropdown-item" target="_blank"  href="https://ranchi.iiitiansnetwork.com">IIIT Ranchi</a>
+                            <a class="dropdown-item" target="_blank"  href="https://sonepat.iiitiansnetwork.com">IIIT Sonepat</a>
+                        	<a class="dropdown-item" target="_blank"  href="https://sricity.iiitiansnetwork.com">IIIT Sri City</a> 
+                            <a class="dropdown-item" target="_blank"  href="https://surat.iiitiansnetwork.com">IIIT Surat</a>
+                        	<a class="dropdown-item" target="_blank"  href="https://tiruchirapalli.iiitiansnetwork.com">IIIT Tiruchirapalli</a>
+                            <a class="dropdown-item" target="_blank"  href="https://una.iiitiansnetwork.com">IIIT Una</a>
+                            <a class="dropdown-item" target="_blank"  href="https://vadodara.iiitiansnetwork.com">IIIT Vadodara</a>
+                        </div>
+                    </li>
+                    <li><a href="https://team.iiitiansnetwork.com/">Our Team</a></li>
+                    <li><a href="https://contact.iiitiansnetwork.com/">Contact</a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+
+	<main id="main" style="overflow-x: hidden;">
+		 <!-- ======= Hero Section ======= -->
+		 <section id="hero" class="d-flex align-items-center justify-content-center">
+			 <div id="particles-js"></div>
+			<div class="container particle-overlay" data-aos="fade-up">
+			
+			 <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+					<div class="col-xl-6 col-lg-6">
+					<h1 style="color:#ffc451"><span><b>JEE Counselling  2020</b></span></h1>
+					</div>
+				    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+			</div>		
+					<h1><br>
+					<span
+						class="txt-rotate"
+						data-period="2000"
+						
+						data-rotate='[ "Predict your ranks", "Compare your colleges", "Ask to IIITians"]'></span>
+					</h1>
+					<br>
+					<br>
+			  <div class="row mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+					<div class="icon-box">
+					  <i class="ri-paint-brush-line"></i>
+					  <h3><a href="Choicefillingtool.html">Choice Filling Tool</a></h3>
+					</div>
+				  </div>
+				  <div class="col-xl-2 col-md-4 col-6 mt-4 mt-md-0">
+				  <div class="icon-box">
+					<i class="ri-calendar-todo-line"></i>
+					<h3><a href="Rankpredictor.html" >Rank Predictor</a></h3>
+				  </div>
+				</div>
+				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+				  <div class="icon-box">
+					<i class="ri-paint-brush-line"></i>
+					<h3><a href="collegepredictor.html" >College Predictor</a></h3>
+				  </div>
+				</div>
+				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+				  <div class="icon-box">
+					<i class="ri-database-2-line"></i>
+					<h3><a href="https://college-comparator.netlify.app/">College Comparator</a></h3>
+				  </div>
+				</div>
+				<div class="col-xl-2 col-md-4 col-6 mt-4 mt-xl-0">
+					<div class="icon-box">
+					  <i class="ri-paint-brush-line"></i>
+					  <h3><a href="https://ask-to-iiitians.herokuapp.com/">Question to IIITians</a></h3>
+					</div>
 				</div>
 
 				<nav class="nav-menu d-none d-lg-block">
@@ -1078,295 +1192,155 @@
 								</p>
 							</div>
 						</li>
+						<li data-aos="fade-left" data-aos-delay="300">
+							<a data-toggle="collapse" href="#faq_7" class="collapsed">Campus<i class="icofont-simple-up"></i></a>
+							<div id="faq_7" class="collapse" data-parent=".faq-list">
+								<p>
+									Few IIITs have their own campus. Others are running in a temporary campus situated in some other colleges (like various IITs / NITs), until the construction of their campus is complete.
+								</p>
+							</div>
+						</li>	
+					<!--
+						<div data-aos="fade-left" data-aos-delay="300" onclick="hideDiv()"  class="btn">Made with ❤ by Counselling Team
+							<div class="btn2"></div>
+						</div>
+					-->	 	      
 					</ul>
 				</div>
-			</section>
-			<!-- End Frequenty Asked Questions Section -->
+		</div> <!-- Div class row closed -->
+		</div>
+		
+	
+	<!-- ======= Join us ended ========== -->
+	  
+	<!-- ======= Team Counselling ========== -->
+		   
+	
+	<div  id="webteam" class="container team-section text-center my-5  "  style="margin-left:auto; margin-right:auto;" >
+		<div class="section-title" data-aos="fade-up">
+			<p>Counselling Team</p>
+		</div>
+	<br>
+	<div class="row" >
+	<div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
+          <div class="avatar mx-auto">
+            <img src="img/team/prashant.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
+          </div>
+          <h5 class="font-weight-bold mt-4 mb-1">Prashant Katiyar</h5>
+            <p class="text-uppercase blue-text mb-0">Lead Developer</p>
+            <ul class="list-unstyled mt-0">
+                <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/prashant-milan-katiyar">
+                <i class="fa fa-linkedin black-text"> </i>
+                </a>
+                </a>
+            </ul>
+        </div>
+		<div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
+			<div class="avatar mx-auto">
+			  <img src="img/team/Aditya Agrawal.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
+			</div>
+			<h5 class="font-weight-bold mt-4 mb-1">Aditya Agrawal</h5>
+			  <p class="text-uppercase blue-text mb-0">Backend Dev./API</p>
+			  <ul class="list-unstyled mt-0">
+				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/crossphoton/">
+				  <i class="fa fa-linkedin black-text"> </i>
+				  </a>
+				  </a>
+			  </ul>
+		  </div>
+		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
+			<div class="avatar mx-auto">
+			  <img src="img/team/Aman.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
+			</div>
+			<h5 class="font-weight-bold mt-4 mb-1">Aman Malhotra</h5>
+			  <p class="text-uppercase blue-text mb-0">ML Models</p>
+			  <ul class="list-unstyled mt-0">
+				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/aman-003-malhotra/">
+				  <i class="fa fa-linkedin black-text"> </i>
+				  </a>
+				  </a>
+			  </ul>
+		  </div>
+		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
+			<div class="avatar mx-auto">
+			  <img src="img/team/Arunit Kumar.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
+			</div>
+			<h5 class="font-weight-bold mt-4 mb-1">Arunit Kumar</h5>
+			  <p class="text-uppercase blue-text mb-0">Backend Dev.</p>
+			  <ul class="list-unstyled mt-0">
+				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/arunit-kumar/">
+				  <i class="fa fa-linkedin black-text"> </i>
+				  </a>
+				  </a>
+			  </ul>
+		  </div>
+	
+	
+	<div class="row">
+		<div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
+			<div class="avatar mx-auto">
+			  <img src="img/team/Ishan Mishra .jpeg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
+			</div>
+			<h5 class="font-weight-bold mt-4 mb-1">Ishan Mishra</h5>
+			  <p class="text-uppercase blue-text mb-0">Backend Dev.</p>
+			  <ul class="list-unstyled mt-0">
+				  <a class="p-2 fa-lg tw-ic" href="http://www.linkedin.com/in/ishan-mishara-00788b192/">
+				  <i class="fa fa-linkedin black-text"> </i>
+				  </a>
+				  </a>
+			  </ul>
+		  </div>
+		
+		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
+			<div class="avatar mx-auto">
+			  <img src="img/team/Koneru Rehasree.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
+			</div>
+			<h5 class="font-weight-bold mt-4 mb-1"><a href="https://rehasree.github.io/portfolio.io/" style="color: #121212;">Reha</a></h5>
+			  <p class="text-uppercase blue-text mb-0">Frontend Dev.</p>
+			  <ul class="list-unstyled mt-0">
+				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/koneru-rehasree-6a9b1b192/">
+				  <i class="fa fa-linkedin black-text"> </i>
+				  </a>
+				  </a>
+			  </ul>
+		  </div>
+		  
+		  <div class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4" data-aos="zoom-in" style="margin-right: auto;margin-left: auto;">
+			<div class="avatar mx-auto">
+			  <img src="img/team/rdt.jpg" class="rounded-circle z-depth-2 responsive team-image" alt="Sample avatar" style="height:100%; width:100%">
+			</div>
+			<h5 class="font-weight-bold mt-4 mb-1">Rishabh Tiwari</h5>
+			  <p class="text-uppercase blue-text mb-0">Frontend Dev.</p>
+			  <ul class="list-unstyled mt-0">
+				  <a class="p-2 fa-lg tw-ic" href="https://www.linkedin.com/in/rdt/">
+				  <i class="fa fa-linkedin black-text"> </i>
+				  </a>
+				  </a>
+			  </ul>
+		  </div>
+	</div>
+	</section>  
+	</main>
+	<!-- End #main -->
 
-			<!-- ======= Join us Section ======= -->
-			<section
-				id="faq"
-				class="faqi section-bg"
-				style="background-color: #fff2e5"
-			>
-				<div class="container">
-					<div class="section-title" data-aos="fade-up">
-						<p>IIIT's at a glance</p>
-					</div>
+	<!-- ======= Footer ======= -->
 
-					<div class="row">
-						<div class="col-lg-6">
-							<ul class="faq-list">
-								<li data-aos="fade-right" data-aos-delay="100">
-									<a
-										data-toggle="collapse"
-										class=""
-										href="#faq1"
-										>IIITs Funding<i
-											class="icofont-simple-up"
-										></i
-									></a>
-									<div
-										id="faq1"
-										class="collapse show"
-										data-parent=".faq-list"
-									>
-										<p>
-											IIITs at Gwalior, Allahabad,
-											Jabalpur, Kurnool and Kancheepuram
-											are fully government funded IIITs.
-											Rest of the IIITs are based on the
-											public-private partnership (PPP)
-											model, funded by the central
-											government, state governments and
-											industry partners in the ratio
-											50:35:15.
-										</p>
-									</div>
-								</li>
-								<li data-aos="fade-right" data-aos-delay="200">
-									<a
-										data-toggle="collapse"
-										href="#faq2"
-										class="collapsed"
-										>What is PPP model?<i
-											class="icofont-simple-up"
-										></i
-									></a>
-									<div
-										id="faq2"
-										class="collapse"
-										data-parent=".faq-list"
-									>
-										<p>
-											A public private partnership
-											involves both government and private
-											organizations working together to
-											complete a project. New IIITs are
-											funded by the central government,
-											state governments and private
-											organizations.
-										</p>
-									</div>
-								</li>
-								<li data-aos="fade-right" data-aos-delay="300">
-									<a
-										data-toggle="collapse"
-										href="#faq3"
-										class="collapsed"
-										>IIITs Vs Other Colleges.<i
-											class="icofont-simple-up"
-										></i
-									></a>
-									<div
-										id="faq3"
-										class="collapse"
-										data-parent=".faq-list"
-									>
-										<p>
-											IIIITs, unlike other major
-											government funded colleges, are a
-											group of institutes that are focused
-											mainly on information technology.
-											They have a curriculum strictly
-											aligned as per the needs of the IT
-											industry.
-										</p>
-									</div>
-								</li>
-								<li data-aos="fade-right" data-aos-delay="300">
-									<a
-										data-toggle="collapse"
-										href="#faq4"
-										class="collapsed"
-										>Courses<i class="icofont-simple-up"></i
-									></a>
-									<div
-										id="faq4"
-										class="collapse"
-										data-parent=".faq-list"
-									>
-										<p>
-											Most of the IIITs offer
-											undergraduate courses in Computer
-											Science & Engineering, Electronics &
-											Communication Engineering and
-											Information Technology. However some
-											IIITs also offer undergraduate
-											courses in design (IIIT-Jabalpur),
-											mechanical engineering
-											(IIIT-Kancheepuram), etc.
-										</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-lg-6">
-							<ul class="faq-list">
-								<li data-aos="fade-left" data-aos-delay="100">
-									<a
-										data-toggle="collapse"
-										class=""
-										href="#faq_5"
-										>No Management Quota<i
-											class="icofont-simple-up"
-										></i
-									></a>
-									<div
-										id="faq_5"
-										class="collapse show"
-										data-parent=".faq-list"
-									>
-										<p>
-											No, for undergraduate admission in
-											any IIIT, one must give the JEE-Main
-											exam and take part in the JOSAA
-											counselling.
-										</p>
-									</div>
-								</li>
-								<li data-aos="fade-left" data-aos-delay="200">
-									<a
-										data-toggle="collapse"
-										href="#faq_6"
-										class="collapsed"
-										>Curriculum<i
-											class="icofont-simple-up"
-										></i
-									></a>
-									<div
-										id="faq_6"
-										class="collapse"
-										data-parent=".faq-list"
-									>
-										<p>
-											The curriculum is strictly aligned
-											to the needs of the IT industry. It
-											is geared at keeping abreast with
-											the latest developments in research
-											and IT industry.
-										</p>
-									</div>
-								</li>
-								<li data-aos="fade-left" data-aos-delay="300">
-									<a
-										data-toggle="collapse"
-										href="#faq_7"
-										class="collapsed"
-										>Campus<i class="icofont-simple-up"></i
-									></a>
-									<div
-										id="faq_7"
-										class="collapse"
-										data-parent=".faq-list"
-									>
-										<p>
-											Few IIITs have their own campus.
-											Others are running in a temporary
-											campus situated in some other
-											colleges (like various IITs / NITs),
-											until the construction of their
-											campus is complete.
-										</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<!-- Div class row closed -->
-				</div>
-			</section>
-			<!-- ======= Join us ended ========== -->
-
-			<!-- ======= Team Counselling ========== -->
-
-			<section
-				class="team-section text-center my-5 section-bg"
-				id="web"
-				style="margin-left: 0px; margin-right: 0px"
-			>
-				<div class="container">
-					<h2
-						class="h1-responsive font-weight-bold my-5"
-						data-aos="fade-up"
-					>
-						Counselling Team
-					</h2>
-
-					<div
-						class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
-						data-aos="zoom-in"
-					>
-						<div class="avatar mx-auto">
-							<img
-								src="img/prashant.jpg"
-								class="rounded-circle z-depth-2 responsive team-image"
-								alt="Sample avatar"
-								style="height: 100%; width: 100%"
-							/>
-						</div>
-						<h5 class="font-weight-bold mt-4 mb-1">
-							Prashant Katiyar
-						</h5>
-						<p class="text-uppercase blue-text mb-0">
-							Lead Developer
-						</p>
-						<ul class="list-unstyled mt-0">
-							<a
-								class="p-2 fa-lg tw-ic"
-								href="https://www.linkedin.com/in/prashant-milan-katiyar"
-							>
-								<i class="fa fa-linkedin black-text"> </i>
-							</a>
-						</ul>
-					</div>
-
-					<div
-						class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
-						data-aos="zoom-in"
-					>
-						<div class="avatar mx-auto">
-							<img
-								src="img/Koneru Rehasree.jpg"
-								class="rounded-circle z-depth-2 responsive team-image"
-								alt="Sample avatar"
-								style="height: 100%; width: 100%"
-							/>
-						</div>
-						<h5 class="font-weight-bold mt-4 mb-1">
-							Koneru Rehasree
-						</h5>
-						<p class="text-uppercase blue-text mb-0">
-							Frontend Dev.
-						</p>
-						<ul class="list-unstyled mt-0">
-							<a
-								class="p-2 fa-lg tw-ic"
-								href="https://www.linkedin.com/in/koneru-rehasree-6a9b1b192/"
-							>
-								<i class="fa fa-linkedin black-text"> </i>
-							</a>
-						</ul>
-					</div>
-
-					<div
-						class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
-						data-aos="zoom-in"
-					>
-						<div class="avatar mx-auto">
-							<img
-								src="img/Aditya Agrawal.jpg"
-								class="rounded-circle z-depth-2 responsive team-image"
-								alt="Sample avatar"
-								style="height: 100%; width: 100%"
-							/>
-						</div>
-						<h5 class="font-weight-bold mt-4 mb-1">
-							Aditya Agrawal
-						</h5>
-						<p class="text-uppercase blue-text mb-0">
-							Backend Dev./API
+	<!-- No need to change anything in footer area -->
+	<footer id="footer">
+		
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
+						<h3>IIITians Network</h3>
+						<p>
+							A never ending connection...<br /><br />
+							<strong>Email:</strong>
+							iiitiansnetwork@gmail.com<br />
+							<strong>Hit Counter</strong><br /><a href="https://www.freecounterstat.com"
+								title="free hit counters"><img
+									src="https://counter3.stat.ovh/private/freecounterstat.php?c=am3swfnxwq8cga496ku7nw7ebfcg8rfq"
+									border="0" title="free hit counters" alt="free hit counters" /></a><br />
 						</p>
 						<ul class="list-unstyled mt-0">
 							<a
@@ -1404,29 +1378,25 @@
 						</ul>
 					</div>
 
-					<div
-						class="col-lg-2 col-md-6 mb-lg-0 mb-5 mt-3 col-4"
-						data-aos="zoom-in"
-					>
-						<div class="avatar mx-auto">
-							<img
-								src="img/Aman.jpg"
-								class="rounded-circle z-depth-2 responsive team-image"
-								alt="Sample avatar"
-								style="height: 100%; width: 100%"
-							/>
-						</div>
-						<h5 class="font-weight-bold mt-4 mb-1">
-							Aman Malhotra
-						</h5>
-						<p class="text-uppercase blue-text mb-0">ML Models</p>
-						<ul class="list-unstyled mt-0">
-							<a
-								class="p-2 fa-lg tw-ic"
-								href="https://www.linkedin.com/in/aman-003-malhotra/"
-							>
-								<i class="fa fa-linkedin black-text"> </i>
-							</a>
+					<div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
+						<h4>Our Community</h4>
+						<ul>
+							<li>
+								<i class="bx bx-chevron-right"></i>
+								<a href="http://team.iiitiansnetwork.com/">Core Team</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i>
+								<a href="http://team.iiitiansnetwork.com/#web">Web Team</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i>
+								<a href="http://team.iiitiansnetwork.com/#design">Design Team</a>
+							</li>
+							<li>
+								<i class="bx bx-chevron-right"></i>
+								<a href="http://team.iiitiansnetwork.com/#content">Content Team</a>
+							</li>
 						</ul>
 					</div>
 
