@@ -244,7 +244,7 @@ function predictResult() {
 		// });
 	} else {
 		alert(
-			'nahi majaak chal raha hai yahan\nbhai college aur gender to select karle pehle'
+			'nahi majaak chal raha hai yahan\nbhai college aur category to select karle pehle'
 		);
 	}
 }
