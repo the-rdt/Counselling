@@ -73,6 +73,7 @@ const addCollege = () => {
 		// console.log(branchHolder.selectedOptions[i].value);
 		selectedBranches.push(branchHolder.selectedOptions[i].text);
 	}
+	$('#branch :selected').remove();
 
 	// console.log(selectedBranches);
 
